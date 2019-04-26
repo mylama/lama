@@ -1,40 +1,12 @@
-# LaMA -- LaTeX Mathematics Assistent (AKA Parhamer_connection)
-## Dependencies
-- Python3
-- PyQt5
-- PyYaml
-- Latex
-- Latex-package: srdp-mathematik <https://ctan.org/pkg/srdp-mathematik>
+# LaMA -- LaTeX Mathematik Assistent
 
-## Screenshots
-![Latex File Assistent](./artwork/program1.png)
+Wir unterrichten seit einigen Jahren Mathematik im AHS-Bereich in Wien. Seither arbeiten wir mit LaTeX als Textverarbeitungsprogramm für Schularbeiten, Tests, Prüfungen, Kompetenzchecks usw. Vorwiegend deshalb, weil eine Formatierung der Aufgaben mit LaTeX wesentlich leichter fällt als mit Word. Um die Funktionalität zu erhöhen, haben wir ein LaTeX-Paket (srdp-mathematik auf CTAN) entwickelt, in dem wir die gängigen Formate der standardisierten Reifeprüfung als Befehle definiert haben, um die Eingabe so einfach und schnell wie möglich zu gestalten. Um das Erstellen insbesondere von Schularbeiten noch zusätzlich zu erleichtern, wurde eine Beispielsumgebung entwickelt, die die Zuweisung von Punkten und dadurch auch einen automatisch generierten Notenschlüssel ermöglicht. Weiters beinhaltet das Paket einen Zufallsgenerator, der die Antwortmöglichkeiten vertauscht, und eine Lösungsumgebung, die das Anzeigen von Lösungen ermöglicht.
 
-## German Version
-### Beschreibung
+Wir sind davon überzeugt, dass diese Art Schularbeiten, Grundkompetenzchecks, Arbeitsblätter usw. zu erstellen für die meisten MathematiklehrerInnen um ein Vielfaches schneller und effektiver ist als in Word und würden daher dies gerne für andere zur Verfügung stellen.
 
-LaMA ist ein Programm, dass Ihnen erlaubt aus einem Pool von Aufgaben eine Schularbeit zusammenzustellen.
-Die Aufgaben sind getrennt nach Typ1 und Typ2 in Schulstufen und Kompetenzen sortiert.
-Es besteht auch die Möglichkeit eigene Aufgaben zu erstellen und dem Pool zuzuführen.
+Zusätzlich haben wir in den letzten Jahren eine Sammlung für Oberstufenbeispiele entwickelt - das LaMA. Das Kernstück dieser Sammlung besteht im Suchalgorithmus, der über Python programmiert wurde. Dadurch wird eine Suche nach Grundkompetenzen, Aufgabenformate usw. ermöglicht. Dies hat sich vor allem auch für die Typ-2 Beispiele sehr bewährt („Ich möchte ausschließlich nach Beispielen, die die GK ‚AN 1.3‘, ‚AN 1.4‘ und ‚WS 2.3‘ enthalten, suchen“). Unsere Sammlung beinhaltet alle vom BIFIE bisher online gestellten Übungs- und Prüfungsaufgaben (650 Typ1 und 100 Typ2).
 
+Um einen besseren Überblick über das Potenzial unseres Projekts geben zu können, haben wir zwei kurze Videos zusammengestellt:
 
-### Maintainers and Contributes
-Maintainer:
-- chrisiweb
-
-Contributes:
-- dfessor (linux compatibility et al.)
-
-## English Version
-
-LaMA is a program that lets you create and choose mathematical problems for your class.
-The problems are organized in competences and levels you can choose from.
-
-<!--
-## To Do
-- How to install
-- What the project does
-- Why the project is useful
-- How users can get started with the project
-- Where users can get help with your project
-- Who maintains and contributes to the project
--->
+https://youtu.be/9W9Z390YIPQ
+https://youtu.be/Y-eNmX6k4T0
