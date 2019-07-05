@@ -781,7 +781,7 @@ input, select, textarea {
 				}
 
 				.row > .col-1-normal {
-					width: 10.3333333333%;
+					width: 8.3333333333%;
 				}
 
 				.row > .off-1-normal {
@@ -3362,5 +3362,7 @@ input, select, textarea {
 		  display: none;
 	  }
 
+	  .mobileHide { 
+		  display: none; } 
 	 
 		
