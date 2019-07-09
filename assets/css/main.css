@@ -2081,7 +2081,6 @@ input, select, textarea {
 		.image img {
 			display: block;
 			border-radius: 5px;
-			max-width: 100%;
 		}
 
 		.image.left {
@@ -3365,6 +3364,9 @@ input, select, textarea {
 
 	  .mobileHide { 
 		  display: none; } 
+
+	#responsive-image {  
+		width: 100%;  height: auto; } 
 	 
 		  
 		
