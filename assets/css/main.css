@@ -3383,6 +3383,13 @@ input, select, textarea {
 			width:100%;
 			height:100%;
 		}
+
+		.cursor-container {
+			width: 50vw;
+			height: 50vh;
+			
+			cursor: url(images/logo_klein.png), pointer;
+		  }
 	 
 		  
 		
