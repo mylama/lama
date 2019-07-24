@@ -10,6 +10,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="LaMA_favicon.ico" />
+
+		<style type="text/css">
+			.mobileHide { display: inline; } 
+		  
+			/* Smartphone Portrait and Landscape */ 
+			@media only screen 
+			  and (min-device-width : 320px) 
+			  and (max-device-width : 480px){ 
+			   .mobileHide { display: none;}
+			}
+		  </style>
+
+<style type="text/css"> 
+	.mobileShow {display: none;} 
+  
+	/* Smartphone Portrait and Landscape */ 
+	@media only screen 
+	  and (min-device-width : 320px) 
+	  and (max-device-width : 480px){ 
+		.mobileShow {display: inline;}
+	}
+  </style>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -69,34 +91,7 @@
 
 				
 
-			<!-- Highlights
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row gtr-200">
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon major fa-paper-plane"></i>
-									<h3>Einleitung</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</section>
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon major fa-pencil"></i>
-									<h3>Downloads</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</section>
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon major fa-wrench"></i>
-									<h3>Über uns</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</section>
-						</div>
-					</div>
-				</section> -->
+			
 
 			<!-- Gigantic Heading -->
 				<section class="wrapper style2">
@@ -111,6 +106,32 @@
 
 			<!-- Posts -->
 
+		<div class="mobileHide">
+		
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row gtr-200">
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+										<h3>Windows</h3>
+										<a href="LaMA.exe" class="button">Download</a></div>
+							</section>
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+										<h3>MAC</h3>
+										<a href="LaMA" class="button">Download</a></div>
+							</section>
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+									<h3>Linux</h3>
+									coming soon</div>
+							</section>
+						</div>
+					</div>
+				</section>
+		</div>
+		
+		<div class="mobileShow">
 			<section class="wrapper style1">
 				<div class="container"><center><h3>Windows</h3>
 					<a href="LaMA.exe" class="button">Download</a><br><br>
@@ -121,7 +142,7 @@
 					<h3>Linux</h3>
 					coming soon
 				</center></section></div></section>
-
+		</div>
 
 				
 				
