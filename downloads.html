@@ -10,6 +10,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="LaMA_favicon.ico" />
+
+		<style type="text/css">
+			.mobileHide { display: inline; } 
+		  
+			/* Smartphone Portrait and Landscape */ 
+			@media only screen 
+			  and (min-device-width : 320px) 
+			  and (max-device-width : 480px){ 
+			   .mobileHide { display: none;}
+			}
+		  </style>
+
+<style type="text/css"> 
+	.mobileShow {display: none;} 
+  
+	/* Smartphone Portrait and Landscape */ 
+	@media only screen 
+	  and (min-device-width : 320px) 
+	  and (max-device-width : 480px){ 
+		.mobileShow {display: inline;}
+	}
+  </style>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -30,16 +52,15 @@
 							<div class="mobileShow">
 									<ul>
 										<li><a href="index.html">Home</a></li>
-										<li><a href="news-updates.html">News & Updates</a></li>
-										<li><a href="download.html">Download & Installation</a></li>
-										<li><a href="das-team.html">Das Team</a></li>
-										<li><a href="anleitungs-videos.html">Anleitung & Videos</a></li>
+										<li><a href="news.html">News & Updates</a></li>
+										<li><a href="downloads.html">Download & Installation</a></li>
+										<li><a href="team.html">Das Team</a></li>
+										<li><a href="videos.html">Anleitung & Videos</a></li>
 										<li><a href="unterstuetzen.html">Unterstützen</a></li>
 										<li><a href="faq.html">FAQ</a></li>
 										</ul>
 										</div>
 						</nav>
-
 				</div>
 
 			<!-- Banner -->
@@ -84,79 +105,136 @@
 				</section> -->
 
 			<!-- Gigantic Heading -->
-				<section class="wrapper style2">
+			<section class="wrapper style2">
 					<div class="container">
 						<header class="major">
-							<h2>News & Updates</h2>
-							<p>Akutelle Version: 1.7.1<br>
-							Letztes Update: August 2019</p>
+							<h2>Downloads & Installation</h2>
+							<p>Hier findest du alle wichtigen Dateien, sowie eine Schritt-Für-Schritt-Anleitung zur Installation von LaMA</p>
 						</header>
 					</div>
 				</section>
 
-				<section class="wrapper style1">
-						<div class="container">
+			<!-- Posts -->
 
-					<h2>Aktuelles:</h2>
-					<p>Im WS 2019/20 findet ein Seminar an der Universität Wien mit dem Titel "Typ 1 Aufgaben qualitätsvoll erstellen" statt. Im Zuge der Lehrveranstaltung wird der Umgang mit LaMA sowie das Verfassen von Typ-1 Aufgaben erlernt.<br>
-						<a href="https://ufind.univie.ac.at/de/course.html?lv=250119&semester=2019W" target="_blank" style="text-decoration:none; color:#0645AD">Mehr Informationen</a>
-						
-						
-					</p>
-						
-
-					<h2>Versionsverlauf:</h2>
-					<ul style="list-style-type: square;">
-
-					<h3>v1.7.1 (29.08.2019):</h3>
-					<li>Minor bug fix</li><br>
-
-					<h3>v1.7 (26.08.2019):</h3>
-					<li>New Feature: Tool to create tests in LaMA ("Neue Schularbeit")</li>
-					<li>Output: .pdf and .tex file</li>
-					<li>*.lama files can be saved and reloaded into LaMA</li>
-					<li>New Feature: Send feedback and bug reports/errors to developers ("Feedback & Fehler")</li>
-					<li>Minor bug fix</li><br>
-
-					<h3>v1.6 (29.04.2019):</h3>
-
-					<li>changed encoding to utf-8</li>
-					<li>bug fix</li><br>
-
-					<h3>v1.5 (22.04.2019):</h3>
-					
-				<li>rename to LaMA (LaTeX Mathematics Assistent)</li>
-				<li>programm creates directories as needed</li><br>
-
-				<h3>v1.4 (30.03.2019):</h3>
-					
-				<li>Created one file (Fusion of File_Assistent and File_Creator)</li><br>
-
-				<h3>v1.3 (28.03.2019):</h3>
-					
-				<li>adapted Assistent to changed config1</li><br>
-
-				<h3>v1.2 (20.03.2019):</h3>
-					
-				<li>Switch to PyQt5</li>
-				<li>added CHANGELOG.md</li><br>
-
-				<h3>v1.1 (16.03.2019):</h3>
-					
-				<li>Updated GUI</li>
-				<li>combined Typ1 and Typ2 problems into one GUI</li>
-				<li>New folder structure</li>
-				<li>added .exe</li>
-				<li>added documentation (README, INSTALLATION)</li>
-				<li>implemented config file (in yaml)</li>
-				<li>ported to UNIX (mac and linux)</li><br>
-
-				<h3>v1.0 (11.10.2018):</h3>
+			<section class="wrapper style1">
+			<div class="mobileHide">
+		
 				
-				<li>Initial release</li>
-			</ul>
-			</div>
-				</section>
+					<center><h2>LaMA</h2></center>
+					<div class="container">
+						<div class="row gtr-200">
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+										<center><h3>Windows</h3>
+										<a href="https://github.com/mylama/lama/releases/latest/download/LaMA.exe" class="button">Download</a></center></div>
+							</section>
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+										<center><h3>MAC</h3>
+										<a href="https://github.com/mylama/lama/releases/latest/download/LaMA" class="button">Download</a></center></div>
+							</section>
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+									<center><h3>Linux</h3>
+									coming soon</center></div>
+							</section>
+						</div>
+					</div><br><br><br>
+
+					<center><h2>Weitere Downloads</h2></center>
+					<div class="container">
+							<div class="row gtr-200">
+									<section class="col-4 col-12-narrower">
+											<div class="box highlight">
+												<center><h3>"srdp-mathematik"-Documentation</h3>
+													<a href="programme/documentation.pdf" class="button">Download</a></center></div>
+										</section>
+								<section class="col-4 col-12-narrower">
+									<div class="box highlight">
+											<center><h3>TeXMaker Einstellungen</h3>
+											<a href="programme/texmaker_settings.ini" class="button" download>Download</a></center></div>
+								</section>
+								<section class="col-4 col-12-narrower">
+									<div class="box highlight">
+											<center><h3>Startdokument.tex</h3>
+											<a href="programme/Startdokument.tex" class="button">Download</a></center></div>
+								</section>
+								
+							</div>
+						</div>
+					</div>
+					<div class="mobileShow">
+							
+								<div class="container">
+									<center><h1>LaMA</h1><br>
+				
+									<h3>Windows</h3>
+									<a href="https://github.com/mylama/lama/releases/latest/download/LaMA.exe" class="button">Download</a><br><br>
+								
+									<h3>MAC</h3>
+									<a href="https://github.com/mylama/lama/releases/latest/download/LaMA" class="button">Download</a><br><br>
+				
+									<h3>Linux</h3>
+									coming soon<br><br><br>
+				
+									<h2>Weitere Downloads</h2><br>
+				
+									<h3>"srdp-mathematik"-Documentation</h3>
+									<a href="programme/documentation.pdf" class="button">Download</a><br><br>
+				
+									<h3>TeXMaker Einstellungen</h3>
+									<a href="programme/texmaker_settings.ini" class="button">Download</a><br><br>
+				
+									<h3>Startdokument</h3>
+									<a href="programme/Startdokument.tex" class="button">Download</a><br><br>
+								</center></div>
+						</div><br><br><br>
+
+						<center><h2>Installationsguide</h2></center>
+						<div class="container">
+								<ol>
+									<li>Installiere eine TeX-Distribution<br>
+									<i>Unser Tipp: <a href="https://miktex.org" target="_blank" style="text-decoration:none; color:#0645AD">MiKTeX</a></i></li><br>
+	
+									<li>Installiere einen PDF-Reader<br>
+									<i>Unser Tipp: <a href="https://www.sumatrapdfreader.org/download-free-pdf-viewer.html" target="_blank" style="text-decoration:none; color:#0645AD">Sumatra PDF</a></i><br>
+									<i>Sumatra PDF ist ein reduzierter PDF-Reader, der im Gegensatz zu anderen (z.B.: Adobe Acrobat Reader) Eigenschaften besitzt, die den Umgang mit LaMA erleichtern ("inverse search").</i></li><br>
+	
+									<li>Installiere einen LaTeX-Editor<br>
+									<i>Unser Tipp: <a href="https://www.xm1math.net/texmaker/" target="_blank" style="text-decoration:none; color:#0645AD">TeXMaker</a></i></li><br>
+	
+									<li>Melde dich bei <a href="https://www.dropbox.com" target="_blank" style="text-decoration:none; color:#0645AD">Dropbox</a> an<br>
+									<i>Die gratis Version von Dropbox ist vollkommen ausreichend. (Benötigter Speicherplatz < 300 MB)<br> 
+										Wichtig: Die Dropbox muss auf dem Computer installiert sein.</i></li><br>
+	
+									<li>Schick uns deine Dropbox-Mail-Adresse an lama.helpme(at)gmail.com mit dem Betreff: Database<br>
+									<i>Wir müssen dich in die Datenbank einladen, damit du Zugriff darauf hast.</i></li><br>
+	
+									<li>Lade <a href="https://mylama.github.io/lama/downloads.html" target="_blank" style="text-decoration:none; color:#0645AD">LaMA</a> herunter.</li><br>
+									
+									<li>Wichtig: Die freigegebenen Ordner ("_database" und "Beispieleinreichung") sowie "LaMA" müssen im selben Ordner liegen.<br>
+									<i>Unser Tipp: Erstelle innerhalb der Dropbox einen Ordner (beliebiger Name ohne Leerzeichen) und gib die von uns freigegebenen Ordner sowie LaMA in diesen "Überordner".</i></li>
+	
+								</ol>
+	
+								<h3>Weitere Tipps:</h3>
+	
+								<ul>
+									<li>Falls LaTeX nicht neu installiert wurde: Unbedingt die TeX-Distribution (MiKTeX bzw. TeXLive) updaten, da das Paket "srdp-mathematik" noch relativ neu ist. (Februar 2019)</li>
+	
+									<li>Um das Arbeiten mit dem "srdp-mathematik"-Paket im TeXMaker zu erleichtern, stellen wir unsere Einstellungen als Download zur Verfügung.<br>
+									<i>"Optionen"-"Dateieinstellungen"-"Datei der Einstellungen durch eine neue ersetzen"</i>
+								</ul>
+						
+				
+				</div>
+				
+		
+	</section>
+
+		
+
+				
 
 			<!-- Posts -->
 				<!-- <section class="wrapper style1">
