@@ -194,6 +194,7 @@ input, select, textarea {
 		margin: 0 auto;
 		max-width: 100%;
 		width: 1400px;
+		cursor:context-menu;
 	}
 
 	.container iframe {
@@ -3404,6 +3405,15 @@ input, select, textarea {
 			
 			cursor: url(images/logo_klein.png), pointer;
 		  }
+
+		  /* #summary {
+			background: #666;
+			width: 100px;
+			color: #fff;
+		}
 	 
-		  
+		#summary:hover {
+			cursor: pointer;
+			color: #fff200;
+		} */
 		
