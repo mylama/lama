@@ -159,6 +159,11 @@ input, select, textarea {
 		letter-spacing: -0.025em;
 	}
 
+	header.major h6 {
+		font-size: 1.5em;
+		margin-bottom: 1.5em;
+	}
+
 	sub {
 		font-size: 0.8em;
 		position: relative;
@@ -2744,6 +2749,14 @@ input, select, textarea {
 				.wrapper.style3 .button:hover {
 					color: rgb(217,255,215) !important;
 				}
+	
+	.wrappert {
+		padding: 1em 0 0em 0;
+	}
+
+		.wrappert.style1{
+			background: #fff;
+		}
 
 /* CTA */
 
@@ -2936,6 +2949,7 @@ input, select, textarea {
 				header.major h2 {
 					font-size: 1.75em;
 				}
+
 
 				header.major p {
 					top: -0.25em;
