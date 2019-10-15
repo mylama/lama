@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage{geometry}
+\geometry{a4paper,left=18mm,right=18mm, top=2cm, bottom=2cm}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage[solution_off]{srdp-mathematik} % solution_on/off
+\setcounter{Zufall}{0}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+
+\pagestyle{fancy} %PAGESTYLE: empty, plain, fancy
+\onehalfspacing %Zeilenabstand
+\setcounter{secnumdepth}{-1} % keine Nummerierung der Ueberschriften
+
+
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOKUMENT - ANFANG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+\begin{document}
+\begin{center}
+\begin{large}
+Arbeitsblatt - Tabellarische Anordnung
+\end{large}
+\end{center}
+\begin{enumerate}
+\item align:\\
+\begin{align*}
+4x-2y+3z&=5\\
+3x&=-2y+4z-7\\
+3x+2y&=4z+7\\
+3x-2y+4z+10&=0\\
+\end{align*}
+
+
+\item cases:\\
+$$f(x)=\begin{cases}
+3x-2&x<2\\
+4x^2+\frac{3}{x}&x=2\\
+-2^x+3&2<x<4\\
+4x+5&x\geq 4\end{cases}$$
+
+
+\item Tabelle:\\
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+	\cellcolor[gray]{0.9}Jahr&\cellcolor[gray]{0.9}Baukostenindex\\ \hline
+	2010&$+3,2\,\%$\\ \hline
+	2011&$+2,3\,\%$\\ \hline
+	2012&$+2,1\,\%$\\ \hline
+	2013&$+1,9\,\%$\\ \hline
+	2014&$+1,1\,\%$\\ \hline
+	\end{tabular}\end{center}
+	
+	\textit{Tipp:} Das Einfärben von Zellen funktioniert mit dem Befehl: \textbackslash cellcolor[gray]\{0.9\}
+	
+\item Tabelle 2:\\
+Kreuze diejenige(n) Zahl(en) an, die aus der Zahlenmenge $\mathbb{Z}$ ist/sind!
+
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+$\frac{25}{5}$&\Square \\ \hline
+$-\sqrt[3]{8}$&\Square \\ \hline
+$0,\overline{4}$&\Square \\ \hline
+$1,4\cdot 10^{-3}$&\Square \\ \hline
+$-1,4\cdot 10^{3}$&\Square \\ \hline
+\end{tabular}
+\end{center}
+
+\textit{Tipp:} Die leeren Kästchen erhält man durch den Befehl: \textbackslash Square
+
+\end{enumerate}
+
+\fancyfoot[c]{\begin{footnotesize}Christoph Weberndorfer, Matthias Konzett\\
+lama.helpme@gmail.com\end{footnotesize}}	
+
+\end{document}

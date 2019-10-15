@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage{geometry}
+\geometry{a4paper,left=18mm,right=18mm, top=2cm, bottom=2cm}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage[solution_off]{srdp-mathematik} % solution_on/off
+\setcounter{Zufall}{0}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+
+\pagestyle{fancy} %PAGESTYLE: empty, plain, fancy
+\onehalfspacing %Zeilenabstand
+\setcounter{secnumdepth}{-1} % keine Nummerierung der Ueberschriften
+
+
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOKUMENT - ANFANG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+\begin{document}
+\begin{center}
+\begin{large}
+Arbeitsblatt - Mathematische Formeln
+\end{large}
+\end{center}
+\begin{enumerate}
+\item Endliches Intervall:\\
+$$[a;b]=\{x\in\mathbb{R}\mid a\leq x\leq b\}$$
+
+\item Durchschnitt zweier Mengen:\\
+$$A\cap B=\{x\in G\mid x\in A\wedge x\in B\}$$
+
+\item "`Große Lösungsformel"':\\
+$$x_{1,2}=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+
+\item Empirische Standardabweichung:
+$$s=\sqrt{\dfrac{(x_1-\bar{x})^2+(x_2-\bar{x})^2+\cdots+(x_n-\bar{x})^2}{n}}$$
+
+\item Vektor-Winkel-Formel:
+$$\cos(\alpha)=\dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|\cdot|\vec{b}|}$$
+
+\item Konfidenzintervall:
+$$h\approx\left[p-z\cdot\sqrt{\dfrac{p\cdot(1-p)}{n}};p+z\cdot\sqrt{\dfrac{p\cdot(1-p)}{n}}\right]$$
+
+\item Ableitung von Polynomfunktionen:\\
+$$f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0 \Rightarrow f'(x)=a_n\cdot n\cdot x^{n-1}+a_{n-1}\cdot(n-1)\cdot x^{n-2}+\cdot+a_1$$
+
+\item Normalverteilung:
+$$F(x)=\dfrac{1}{\sigma\cdot\sqrt{2\pi}}\displaystyle\int^x_{-\infty}e^{-\frac{1}{2}\cdot\left(\frac{t-\mu}{\sigma}\right)^2}\,\text{d}t$$
+
+\item Kreuzprodukt:
+$$\vec{a}\times\vec{b}=\Vek{a_1}{a_2}{a_3}\times\Vek{b_1}{b_2}{b_3}=\Vek{a_2b_3-a_3b_2}{a_3b_1-a_1b_3}{a_1b_2-a_2b_1}$$
+
+\item Goldener Schnitt:
+$$\lim\limits_{n\rightarrow\infty}\dfrac{f_n+1}{f_n}=\lim\limits_{n\rightarrow\infty}\dfrac{\Phi^{n+1}}{\Phi^n}=\Phi=\dfrac{1+\sqrt{5}}{2}\approx 1,6180339887$$
+\end{enumerate}
+
+\fancyfoot[c]{\begin{footnotesize}Christoph Weberndorfer, Matthias Konzett\\ lama.helpme@gmail.com\end{footnotesize}}	
+
+\end{document}
