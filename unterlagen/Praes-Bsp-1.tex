@@ -1,0 +1,37 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage{geometry}
+\geometry{a4paper,left=18mm,right=18mm, top=2cm, bottom=2cm}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[solution_on]{srdp-mathematik} % solution_on/off
+\setcounter{Zufall}{0}
+
+\pagestyle{empty} %PAGESTYLE: empty, plain, fancy
+\onehalfspacing %Zeilenabstand
+\setcounter{secnumdepth}{-1} % keine Nummerierung der Ueberschriften
+
+\begin{document}
+\phantom{}
+\vfil
+
+\begin{center}
+
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-4.74,-4.64)(4.94,4.54)
+\multips(0,-4)(0,1.0){10}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(-4.74,0)(4.94,0)}
+\multips(-4,0)(1.0,0){10}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,-4.64)(0,4.54)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=2]{->}(0,0)(-4.74,-4.64)(4.94,4.54)
+\psplot[linewidth=2.pt,plotpoints=200]{-4.740000000000002}{4.940000000000001}{-0.19753086419753085*x^(4.0)+1.7777777777777777*x^(2.0)}
+\begin{scriptsize}
+\rput[bl](-3.46,-2.98){$f$}
+\end{scriptsize}
+\end{pspicture*}
+
+\end{center}
+
+\end{document}
