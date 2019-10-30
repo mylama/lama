@@ -1,0 +1,263 @@
+\documentclass[a4paper,11pt]{report}
+
+\usepackage{geometry}
+\geometry{a4paper,left=18mm,right=18mm, top=2cm, bottom=2cm}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\usepackage{setspace}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage[solution_on]{srdp-mathematik} % solution_on/off
+\setcounter{Zufall}{0}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+
+\pagestyle{plain} %PAGESTYLE: empty, plain, fancy
+\onehalfspacing %Zeilenabstand
+\setcounter{secnumdepth}{-1} % keine Nummerierung der Ueberschriften
+
+
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOKUMENT - ANFANG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+\begin{document}
+\section{Übungsblatt Bilder/Grafiken}\leer
+
+\resizebox{0.2\linewidth}{!}{\includegraphics{dimensionen_8.eps}}\hspace{0,5cm}\resizebox{0.2\linewidth}{!}{\includegraphics{loesungswege_8.eps}}\hspace{0,5cm}\resizebox{0.2\linewidth}{!}{\includegraphics{mathematik_verstehen_8.eps}}\hspace{0,5cm}\resizebox{0.2\linewidth}{!}{\includegraphics{mathematik_8.eps}}\leer
+
+\begin{beispiel}[AN 3.1]{1} %PUNKTE DES BEISPIELS
+				In der Abbildung ist der Graph einer linearen Funktion f dargestellt.
+
+Zeichne die Ableitungsfunktion $f'$ der Funktion $f$ ein!
+\leer
+
+\psset{xunit=2cm,yunit=2cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-2.3374442326058738,-0.78956978125752767)(2.9379173276093633,3.5211872113310436)
+\multips(0,-0.5)(0,0.5){8}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(-2.3374442326058738,0)(2.9379173276093633,0)}
+\multips(-2,0)(0.5,0){11}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(0,-0.78956978125752767)(0,3.5211872113310436)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=0.5,Dy=0.5,ticksize=-2pt 0,subticks=2]{->}(0,0)(-2.3374442326058738,-0.78956978125752767)(2.9379173276093633,3.5211872113310436)[x,140] [y,-40]
+\psplot{-2.3374442326058738}{2.9379173276093633}{(--2.--0.5*x)/1.}
+\antwort{\psplot[linecolor=red]{-2.3374442326058738}{2.9379173276093633}{(--0.5-0.*x)/1.}}
+\begin{scriptsize}
+\rput[bl](-1.8798024568774225,1.1747330157779008){$f$}
+\end{scriptsize}
+\end{pspicture*}
+\leer
+
+\antwort{Die Aufgabe gilt als richtig gelöst, wenn der Graph von $f'$ deutlich erkennbar eine konstante Funktion mit der Funktionsgleichung $f'(x)=0,5$ ist. Die Funktionsgleichung der 1. Ableitung muss nicht angegeben sein.}
+\end{beispiel}
+
+
+\begin{beispiel}[WS 1.1]{1} %PUNKTE DES BEISPIELS
+Das nachstehende Kastenschaubild (Boxplot) zeigt die Studiendauer in Semestern für eine technische Studienrichtung.
+
+\psset{xunit=1cm,yunit=1cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(11.174341159747245,-0.9390367939586384)(20.985619227058667,1.5233020741635206)
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=false,Dx=2.,Dy=1.,ticksize=-2pt 0,subticks=2]{}(0,0)(11.174341159747245,-0.9390367939586384)(20.985619227058667,1.5233020741635206)
+\psframe[linecolor=darkgray,fillcolor=darkgray,fillstyle=solid,opacity=0.1](14.,0.29999999999999993)(17.,1.1)
+\psline[linecolor=darkgray,fillcolor=darkgray,fillstyle=solid,opacity=0.1](12.,0.3)(12.,1.1)
+\psline[linecolor=darkgray,fillcolor=darkgray,fillstyle=solid,opacity=0.1](20.,0.3)(20.,1.1)
+\psline[linecolor=darkgray,fillcolor=darkgray,fillstyle=solid,opacity=0.1](15.,0.3)(15.,1.1)
+\psline[linecolor=darkgray,fillcolor=darkgray,fillstyle=solid,opacity=0.1](12.,0.7)(14.,0.7)
+\psline[linecolor=darkgray,fillcolor=darkgray,fillstyle=solid,opacity=0.1](17.,0.7)(20.,0.7)
+\end{pspicture*}
+
+Welche Aussagen kannst du diesem Kastenschaubild entnehmen? Kreuze die zutreffende(n) Aussage(n) an.
+
+\multiplechoice[3]{  %Anzahl der Antwortmoeglichkeiten, Standard: 5
+				L1={Die Spannweite beträgt 12 Semester.},   %1. Antwortmoeglichkeit 
+				L2={25\% der Studierenden studieren höchstens 14 Semester lang.},   %2. Antwortmoeglichkeit
+				L3={$\frac{1}{4}$ der Studierenden benötigt für den Abschluss des Studiums mindestens 17 Semester.},   %3. Antwortmoeglichkeit
+				L4={Mindestens 50\% der Studierenden benötigen für den Abschluss des Studiums zwischen 15 und 17 Semestern.},   %4. Antwortmoeglichkeit
+				L5={Es gibt Studierende, die ihr Studium erst nach 10 Jahren beenden.},	 %5. Antwortmoeglichkeit
+				L6={},	 %6. Antwortmoeglichkeit
+				L7={},	 %7. Antwortmoeglichkeit
+				L8={},	 %8. Antwortmoeglichkeit
+				L9={},	 %9. Antwortmoeglichkeit
+				%% LOESUNG: %%
+				A1=2,  % 1. Antwort
+				A2=3,	 % 2. Antwort
+				A3=0,  % 3. Antwort
+				A4=0,  % 4. Antwort
+				A5=0,  % 5. Antwort
+				}
+\end{beispiel}
+
+\begin{beispiel}[AN 1.2]{1} %PUNKTE DES BEISPIELS
+Gegeben ist der Graph einer Polynomfunktion $f$.
+
+\begin{center}
+\psset{xunit=0.8cm,yunit=0.8cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-4.62,-3.72)(11.66,6.94)
+\multips(0,-3)(0,1.0){11}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=darkgray]{c-c}(-4.62,0)(11.66,0)}
+\multips(-4,0)(1.0,0){17}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=darkgray]{c-c}(0,-3.72)(0,6.94)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=2]{->}(0,0)(-4.62,-3.72)(11.66,6.94)[x,140] [f(x),-40]
+\psplot[linewidth=2.pt,plotpoints=200]{-4.62}{11.659999999999991}{-0.02263888888888889*x^(4.0)+0.25055555555555553*x^(3.0)-0.35180555555555554*x^(2.0)-2.255*x+5.0}
+\rput[bl](-3.7,-2.2){$f$}
+\end{pspicture*}
+\end{center}
+
+Kreuze die beiden zutreffenden Aussagen an!
+
+\multiplechoice[3]{  %Anzahl der Antwortmoeglichkeiten, Standard: 5
+				L1={Der Differenzialquotient an der Stelle $x=6$ ist größer als der Differenzialquotient an der Stelle $x=-3$.},   %1. Antwortmoeglichkeit 
+				L2={Der Differenzialquotient an der Stelle $x=1$ ist negativ.},   %2. Antwortmoeglichkeit
+				L3={Der Differenzialquotient im Intervall $[3;6]$ ist nicht negativ.},   %3. Antwortmoeglichkeit
+				L4={Die mittlere Änderungsrate ist in keinem Intervall gleich 0.},   %4. Antwortmoeglichkeit
+				L5={Der Differenzialquotient im Intervall $[-3;0]$ ist 1.},	 %5. Antwortmoeglichkeit
+				L6={},	 %6. Antwortmoeglichkeit
+				L7={},	 %7. Antwortmoeglichkeit
+				L8={},	 %8. Antwortmoeglichkeit
+				L9={},	 %9. Antwortmoeglichkeit
+				%% LOESUNG: %%
+				A1=2,  % 1. Antwort
+				A2=3,	 % 2. Antwort
+				A3=0,  % 3. Antwort
+				A4=0,  % 4. Antwort
+				A5=0,  % 5. Antwort
+				}
+\end{beispiel}
+
+\begin{beispiel}[FA 1.1]{1} %PUNKTE DES BEISPIELS
+Im Folgenden sind Darstellungen von Kurven und Geraden gegeben.
+\leer
+
+Kreuze diejenige(n) Abbildung(en) an, die Graph(en) einer Funktion \mbox{$f: x\rightarrow f(x)$} ist/sind!
+
+\langmultiplechoice[5]{  %Anzahl der Antwortmoeglichkeiten, Standard: 5
+				L1={\psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.54,-1.5)(7.62,5.62)
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=2]{->}(0,0)(-1.54,-2.32)(7.62,5.62)
+\psplot[plotpoints=200]{-1.5400000000000018}{7.6199999999999966}{0.004464285714285714*x^(4.0)-0.019345238095238096*x^(3.0)-0.3273809523809524*x^(2.0)+1.6964285714285714*x+2.0}
+\begin{scriptsize}
+\rput[tl](3.5,4.52){$f$}
+\end{scriptsize}
+\end{pspicture*}},   %1. Antwortmoeglichkeit 
+				L2={\psset{xunit=0.75cm,yunit=0.7cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-2.56,-3.38)(4.54,3.52)
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=2]{->}(0,0)(-2.56,-3.38)(4.54,3.52)
+\begin{scriptsize}
+\rput[tl](1.76,3.3){$f$}
+\end{scriptsize}
+\rput{0.}(0.01,0.){\psellipse(0,0)(4.002818528382616,3.0000093618459216)}
+\end{pspicture*}},   %2. Antwortmoeglichkeit
+				L3={\psset{xunit=0.75cm,yunit=0.7cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-2.26,-0.8)(4.42,5.4)
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=2]{->}(0,0)(-2.26,-0.8)(4.42,5.4)
+\begin{scriptsize}
+\rput[tl](2.06,3.18){$f$}
+\end{scriptsize}
+\psline(2.,-0.8)(2.,5.4)
+\end{pspicture*}},   %3. Antwortmoeglichkeit
+				L4={\psset{xunit=0.7cm,yunit=0.7cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-2.26,-0.8)(4.42,5.4)
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=2]{->}(0,0)(-2.26,-0.8)(4.42,5.4)
+\begin{scriptsize}
+\rput[tl](2.08,2.86){$f$}
+\end{scriptsize}
+\psplot{-2.26}{4.42}{(--2.-0.*x)/1.}
+\end{pspicture*}},   %4. Antwortmoeglichkeit
+				L5={\psset{xunit=0.7cm,yunit=0.7cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.367814021398395,-1.3041748207011512)(5.445940009284722,4.578439189711757)
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=2]{->}(0,0)(-1.367814021398395,-1.3041748207011512)(5.445940009284722,4.578439189711757)
+\psplot[plotpoints=200]{-1.367814021398395}{2}{x}
+\psplot[plotpoints=200]{2}{5.445940009284722}{0.5*x+1.0}
+\begin{scriptsize}
+\rput[tl](2.9373392487920627,3.1){$f$}
+\end{scriptsize}
+\end{pspicture*}},	 %5. Antwortmoeglichkeit
+				L6={},	 %6. Antwortmoeglichkeit
+				L7={},	 %7. Antwortmoeglichkeit
+				L8={},	 %8. Antwortmoeglichkeit
+				L9={},	 %9. Antwortmoeglichkeit
+				%% LOESUNG: %%
+				A1=1,  % 1. Antwort
+				A2=4,	 % 2. Antwort
+				A3=5,  % 3. Antwort
+				A4=0,  % 4. Antwort
+				A5=0,  % 5. Antwort
+				}
+\end{beispiel}
+
+\begin{beispiel}[FA 1.4]{1} %PUNKTE DES BEISPIELS
+Gegeben sind die Graphen der Funktionen $f$, $g$ und $h$.
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-0.8534760248867364,-0.704367597661392)(7.9923785887858365,7.5352290674105715)
+\multips(0,0)(0,1.0){9}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(0,0)(7.9923785887858365,0)}
+\multips(0,0)(1.0,0){9}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(0,0)(0,7.5352290674105715)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=2]{->}(0,0)(0.,0.)(7.9923785887858365,7.5352290674105715)
+\psplot[plotpoints=200]{0.0001}{7.9923785887858365}{1.0/x}
+\psplot[plotpoints=200]{-0.8534760248867364}{7.9923785887858365}{x}
+\rput[tl](6.090933204538461,7){$g$}
+\psplot[plotpoints=200]{-0.8534760248867364}{7.9923785887858365}{-x+4.0}
+\rput[tl](2.9494147436080147,1.6){$h$}
+\begin{scriptsize}
+\rput[bl](0.3314826928326426,6.3502703496911925){$f$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+Kreuze die beiden zutreffenden Aussagen an.
+
+\multiplechoice[5]{  %Anzahl der Antwortmoeglichkeiten, Standard: 5
+				L1={$g(1)>g(3)$},   %1. Antwortmoeglichkeit 
+				L2={$h(1)>h(3)$},   %2. Antwortmoeglichkeit
+				L3={$f(1)=g(1)$},   %3. Antwortmoeglichkeit
+				L4={$h(1)=g(1)$},   %4. Antwortmoeglichkeit
+				L5={$f(1)<f(3)$},	 %5. Antwortmoeglichkeit
+				L6={},	 %6. Antwortmoeglichkeit
+				L7={},	 %7. Antwortmoeglichkeit
+				L8={},	 %8. Antwortmoeglichkeit
+				L9={},	 %9. Antwortmoeglichkeit
+				%% LOESUNG: %%
+				A1=2,  % 1. Antwort
+				A2=3,	 % 2. Antwort
+				A3=0,  % 3. Antwort
+				A4=0,  % 4. Antwort
+				A5=0,  % 5. Antwort
+				}
+
+\end{beispiel}
+
+\begin{beispiel}[AN 4.3]{1} %PUNKTE DES BEISPIELS
+Die Funktionsgraphen von $f$ und $g$ schließen ein gemeinsames Flächenstück ein. 
+
+\begin{center}
+\newrgbcolor{uququq}{0.25098039215686274 0.25098039215686274 0.25098039215686274}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-2.4759718077494743,-3.384122420216285)(6.6618232318926704,2.6150386710270324)
+\multips(0,-3)(0,1.0){6}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(-2.4759718077494743,0)(6.6618232318926704,0)}
+\multips(-2,0)(1.0,0){10}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(0,-3.384122420216285)(0,2.6150386710270324)}
+\begin{scriptsize}
+\psaxes[xAxis=true,yAxis=true,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=2]{->}(0,0)(-2.4759718077494743,-3.384122420216285)(6.6618232318926704,2.6150386710270324)[$x$,140] [$y$,-40]
+\pscustom[linecolor=uququq,fillcolor=uququq,fillstyle=solid,opacity=0.25]{\psplot{-1.}{6.}{0.25*x^(2.0)-x-1.25}\lineto(6.,1.760295797992526)\psplot{6.}{-1.}{0.015721239059366534*x^(3.0)-0.1853729697133834*x^(2.0)+0.6909772660112011*x+0.892071474783951}\lineto(-1.,0.)\closepath}
+\psplot[plotpoints=200]{-2.4759718077494743}{6.6618232318926704}{0.25*x^(2.0)-x-1.25}
+\psplot[plotpoints=200]{-2.4759718077494743}{6.6618232318926704}{0.015721239059366534*x^(3.0)-0.1853729697133834*x^(2.0)+0.6909772660112011*x+0.892071474783951}
+
+\psdots[dotsize=3pt 0,dotstyle=*](-1.,0.)
+\rput[bl](-2.3567831767976206,1.5){$g$}
+\psdots[dotsize=3pt 0,dotstyle=*](6.005606333326987,1.7612205243973174)
+\rput[bl](-2.2971888613216933,-1.4){$f$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+Mit welchen der nachstehenden Berechnungsvorschriften kann man den Flächeninhalt des gekennzeichneten Flächenstücks ermitteln?
+
+
+\end{beispiel}
+
+
+
+\fancyfoot[c]{\begin{footnotesize}Christoph Weberndorfer (c.weberndorfer@gmail.com), Matthias Konzett (m.s.konzett@gmail.com)\end{footnotesize}}	
+%\fancyfoot[c]{Christoph Weberndorfer und Matthias Konzett\\
+%\hspace{0,5cm} c.weberndorfer@gmail.com und m.s.konzett@gmail.com}	
+\end{document}

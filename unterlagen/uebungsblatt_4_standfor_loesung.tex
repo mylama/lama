@@ -1,0 +1,326 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage{geometry}
+\geometry{a4paper,left=18mm,right=18mm, top=2cm, bottom=2cm} 
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[solution_off]{srdp-mathematik} % solution_on/off
+\setcounter{Zufall}{0}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+
+\pagestyle{plain} %PAGESTYLE: empty, plain, fancy
+\onehalfspacing %Zeilenabstand
+\setcounter{secnumdepth}{-1} % keine Nummerierung der Ueberschriften
+
+
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOKUMENT - ANFANG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+\begin{document}
+\setcounter{Antworten}{1}
+\section{Übungsblatt Typ-1 Formate}
+
+\begin{beispiel}[AG 1.1]{1} %PUNKTE DES BEISPIELS
+Die Menge $M = \{ x \in \mathbb{Q}\,|\,2 < x < 5\}$ ist eine Teilmenge der rationalen Zahlen.
+
+Kreuze die beiden zutreffenden Aussagen an.
+
+\multiplechoice[5]{  %Anzahl der Antwortmoeglichkeiten, Standard: 5
+				L1={4,99 ist die größte Zahl, die zur Menge $M$ gehört.},   %1. Antwortmoeglichkeit 
+				L2={Es gibt unendlich viele Zahlen in der Menge $M$, die kleiner als 2,1 sind.},   %2. Antwortmoeglichkeit
+				L3={Jede reelle Zahl, die größer als 2 und kleiner als 5 ist, ist in der Menge $M$
+enthalten.},   %3. Antwortmoeglichkeit
+				L4={Alle Elemente der Menge $M$ können in der Form $\frac{a}{b}$
+geschrieben werden, wobei $a$ und $b$ ganze Zahlen sind und $b \neq 0$ ist.},   %4. Antwortmoeglichkeit
+				L5={Die Menge $M$ enthält keine Zahlen aus der Menge der komplexen Zahlen.},	 %5. Antwortmoeglichkeit
+				L6={},	 %6. Antwortmoeglichkeit
+				L7={},	 %7. Antwortmoeglichkeit
+				L8={},	 %8. Antwortmoeglichkeit
+				L9={},	 %9. Antwortmoeglichkeit
+				%% LOESUNG: %%
+				A1=2,  % 1. Antwort
+				A2=4,	 % 2. Antwort
+				A3=0,  % 3. Antwort
+				A4=0,  % 4. Antwort
+				A5=0,  % 5. Antwort
+				}
+\end{beispiel}
+
+\begin{beispiel}[K7 - KKK]{1} %PUNKTE DES BEISPIELS
+Gegeben sind mehrere Gleichungen.
+
+Kreuze jene Gleichung an, die eine Kugel beschreibt.
+
+\langmultiplechoice[6]{  %Anzahl der Antwortmoeglichkeiten, Standard: 5
+				L1={$x^2+(y-2)^2-(z-4)^2=16$},   %1. Antwortmoeglichkeit 
+				L2={$(x-4)^3+(y-1)^3=64$},   %2. Antwortmoeglichkeit
+				L3={$(x-1)^2+(y+3)^2+z^2=5$},   %3. Antwortmoeglichkeit
+				L4={$x\cdot(y-2)^2\cdot(z-1)^2=9$},   %4. Antwortmoeglichkeit
+				L5={$x^2+y^2+z^2-4x+2z+10=0$},	 %5. Antwortmoeglichkeit
+				L6={$3x^2+(y-2)^2+2z^2=16$},	 %6. Antwortmoeglichkeit
+				L7={},	 %7. Antwortmoeglichkeit
+				L8={},	 %8. Antwortmoeglichkeit
+				L9={},	 %9. Antwortmoeglichkeit
+				%% LOESUNG: %%
+				A1=3,  % 1. Antwort
+				A2=0,	 % 2. Antwort
+				A3=0,  % 3. Antwort
+				A4=0,  % 4. Antwort
+				A5=0,  % 5. Antwort
+				}
+				\end{beispiel}
+				
+				\begin{beispiel} [AG 1.2]{1} %PUNKTE DES BEISPIELS
+Ordne jeder Aussage den richtigen Term zu!
+\zuordnen[0.25]{
+				R1={Der Energieverbrauch E ist um 10\,\% gestiegen.},				% Response 1
+				R2={Der Energieverbrauch E ist auf das Doppelte gestiegen.},				% Response 2
+				R3={Der Energieverbrauch E wurde um 10\,\% gesenkt.},				% Response 3
+				R4={Der Energieverbrauch E ist um das Doppelte gestiegen.},				% Response 4
+				%% Moegliche Zuordnungen: %%
+				A={$E+E$}, 				%Moeglichkeit A  
+				B={$E+0,10$}, 				%Moeglichkeit B  
+				C={$E:1,1$}, 				%Moeglichkeit C  
+				D={$E\cdot1,1$}, 				%Moeglichkeit D  
+				E={$E\cdot0,9$}, 				%Moeglichkeit E  
+				F={$3\cdot E$}, 				%Moeglichkeit F  
+				%% LOESUNG: %%
+				A1={D},				% 1. richtige Zuordnung
+				A2={A},				% 2. richtige Zuordnung
+				A3={E},				% 3. richtige Zuordnung
+				A4={F},				% 4. richtige Zuordnung
+				}
+\end{beispiel}
+
+\begin{beispiel}[FA 6.4]{1}
+Gegeben sind vier Funktionen $f_1, f_2, f_3$ und $f_4$ mit den nachfolgend angeführten Funktionsgleichungen.
+
+Ordne den Funktionen jeweils die zugehörige Periodenlänge $p$ zu.
+
+\zuordnen{
+				R1={$f_1(x)=3\cdot\sin(2\cdot x)$},				% Response 1
+				R2={$f_2(x)=\pi\cdot\sin(4\pi\cdot x)$},				% Response 2
+				R3={$f_3(x)=\sin(0,5\pi\cdot x)$},				% Response 3
+				R4={$f_4(x)=4\cdot\sin(x)$},				% Response 4
+				%% Moegliche Zuordnungen: %%
+				A={$p=4$}, 				%Moeglichkeit A  
+				B={$p=3\pi$}, 				%Moeglichkeit B  
+				C={$p=\pi$}, 				%Moeglichkeit C  
+				D={$p=2\pi$}, 				%Moeglichkeit D  
+				E={$p=0,5$}, 				%Moeglichkeit E  
+				F={$p=3$}, 				%Moeglichkeit F  
+				%% LOESUNG: %%
+				A1={C},				% 1. richtige Zuordnung
+				A2={E},				% 2. richtige Zuordnung
+				A3={A},				% 3. richtige Zuordnung
+				A4={D},				% 4. richtige Zuordnung
+				}
+\end{beispiel}
+
+\begin{beispiel}[AG 2.3]{1} %PUNKTE DES BEISPIELS
+				Die Anzahl der Lösungen der quadratischen Gleichung $rx^2+sx+t=0$ in der Menge der reellen Zahlen hängt von den Koeffizienten $r,s$ und $t$ ab.
+				
+				\lueckentext{
+								text={Die quadratische Gleichung $rx^2+sx+t=0$ hat genau dann \textbf{für alle} \mbox{$r\neq 0;r,s,t\in\mathbb{R}$} \gap , wenn \gap gilt.}, 	%Lueckentext Luecke=\gap
+								L1={zwei reelle Lösungen}, 		%1.Moeglichkeit links  
+								L2={keine reelle Lösung}, 		%2.Moeglichkeit links
+								L3={genau eine reelle Lösung}, 		%3.Moeglichkeit links
+								R1={$r^2-4st>0$}, 		%1.Moeglichkeit rechts 
+								R2={$t^2=4rs$}, 		%2.Moeglichkeit rechts
+								R3={$s^2-4rt>0$}, 		%3.Moeglichkeit rechts
+								%% LOESUNG: %%
+								A1=1,   % Antwort links
+								A2=3		% Antwort rechts 
+								}
+
+\end{beispiel}
+
+\begin{beispiel}[AG 3.4]{1} %PUNKTE DES BEISPIELS
+
+Gegeben sind zwei Geraden $g$ und $h$.
+
+Die Gleichungen der Geraden lauten $g:\, X=\Vek{3}{5}{} + s \cdot \Vek{-2}{4}{}$ und\\
+ \mbox{$h:\, 2\cdot x - 4 \cdot y= -14$}.
+
+\lueckentext[-0.2]{
+				text={Die Geraden $g$ und $h$ \gap, weil \gap.}, 	%Lueckentext Luecke=\gap
+				L1={sind ident}, 		%1.Moeglichkeit links  
+				L2={sind parallel}, 		%2.Moeglichkeit links
+				L3={stehen normal aufeinander}, 		%3.Moeglichkeit links
+				R1={die Richtungsvektoren der beiden Geraden $g$ und $h$ parallel sind}, 		%1.Moeglichkeit rechts 
+				R2={der Punkt $P(3|5)$ auf beiden Geraden $g$ und $h$ liegt}, 		%2.Moeglichkeit rechts
+				R3={der Richtungsvektor von $g$ zum Normalvektor von $h$ parallel ist.}, 		%3.Moeglichkeit rechts
+				%% LOESUNG: %%
+				A1=3,   % Antwort links
+				A2=3		% Antwort rechts 
+				}
+ 
+\end{beispiel}
+
+\begin{beispiel}[AG 2.1]{1} %PUNKTE DES BEISPIELS
+Ein Geldbetrag K wird auf ein Sparbuch gelegt. Er wächst in $n$ Jahren bei einem effektiven Jahreszinssatz von $p\,\%$ auf $K(n)=K\cdot \left(1+\frac{p}{100}\right)^n$.
+
+\leer
+
+Gib eine Formel an, die es ermöglicht, aus dem aktuellen Kontostand $K(n)$ jenen des nächsten Jahres $K(n+1)$ zu errechnen!	
+
+
+\antwort{$K(n+1)=K(n)\cdot\left(1+\frac{p}{100}\right)$}				
+\end{beispiel}
+
+\begin{beispiel}[AN 3.3]{1} %PUNKTE DES BEISPIELS
+Für eine Polynomfunktion $f$ gilt: $W=(2\mid y_w)$ ist ein Wendepunkt von $f$ und die Tangente an den Graphen der Funktion $f$ im Wendepunkt wird durch die Gleichung $3x+y=6$ beschrieben.
+
+Ergänze die nachfolgenden Gleichungen so, dass sie wahre Aussagen darstellen.\leer
+
+$f'(2)=$ \antwort[\rule{3cm}{0.3pt}]{-3}\leer
+
+$f''(2)=$ \antwort[\rule{3cm}{0.3pt}]{0}
+\end{beispiel}
+
+\newpage
+\pagestyle{fancy}
+\setcounter{Antworten}{0}
+
+\begin{scriptsize}
+\section{\texttt{srdp-mathematik} Befehlsübersicht}\leer
+
+\begin{minipage}{0.5\textwidth}
+\subsection{Beispiel Umgebung}
+\begin{verbatim}
+\begin{beispiel}{0} %PUNKTE DES BEISPIELS
+
+\end{beispiel}
+\end{verbatim}
+\end{minipage}\begin{minipage}{0.5\textwidth}
+\subsection{Lange Beispiel Umgebung}
+\begin{verbatim}
+\begin{langesbeispiel} \item[0] %PUNKTE DES BEISPIELS
+
+\end{langesbeispiel}
+\end{verbatim}
+\end{minipage}\leer
+
+
+\begin{minipage}{0.5\textwidth}
+\subsection{Multiplechoice}
+\begin{verbatim}
+\multiplechoice[5]{%Anzahl der Antworten Standard: 5
+				L1={},   %1. Antwortmoeglichkeit 
+				L2={},   %2. Antwortmoeglichkeit
+				L3={},   %3. Antwortmoeglichkeit
+				L4={},   %4. Antwortmoeglichkeit
+				L5={},	 %5. Antwortmoeglichkeit
+				L6={},	 %6. Antwortmoeglichkeit
+				L7={},	 %7. Antwortmoeglichkeit
+				L8={},	 %8. Antwortmoeglichkeit
+				L9={},	 %9. Antwortmoeglichkeit
+				%% LOESUNG: %%
+				A1=0,  % 1. Antwort
+				A2=0,	 % 2. Antwort
+				A3=0,  % 3. Antwort
+				A4=0,  % 4. Antwort
+				A5=0,  % 5. Antwort
+				}
+\end{verbatim}
+\end{minipage}\begin{minipage}{0.5\textwidth}
+\subsection{Lange Mutiplechoice}
+\begin{verbatim}
+\langmultiplechoice[5]{%Anzahl der Antworten Standard: 5
+				L1={},   %1. Antwortmoeglichkeit 
+				L2={},   %2. Antwortmoeglichkeit
+				L3={},   %3. Antwortmoeglichkeit
+				L4={},   %4. Antwortmoeglichkeit
+				L5={},	 %5. Antwortmoeglichkeit
+				L6={},	 %6. Antwortmoeglichkeit
+				L7={},	 %7. Antwortmoeglichkeit
+				L8={},	 %8. Antwortmoeglichkeit
+				L9={},	 %9. Antwortmoeglichkeit
+				%% LOESUNG: %%
+				A1=0,  % 1. Antwort
+				A2=0,	 % 2. Antwort
+				A3=0,  % 3. Antwort
+				A4=0,  % 4. Antwort
+				A5=0,  % 5. Antwort
+				}
+\end{verbatim}
+\end{minipage}\leer
+
+
+\begin{minipage}[t]{0.5\textwidth}
+\subsection{Lückentext}
+\begin{verbatim}
+\lueckentext{
+				text={}, 	%Lueckentext Luecke=\gap
+				L1={}, 		%1.Moeglichkeit links  
+				L2={}, 		%2.Moeglichkeit links
+				L3={}, 		%3.Moeglichkeit links
+				R1={}, 		%1.Moeglichkeit rechts 
+				R2={}, 		%2.Moeglichkeit rechts
+				R3={}, 		%3.Moeglichkeit rechts
+				%% LOESUNG: %%
+				A1=0,   % Antwort links
+				A2=0		% Antwort rechts 
+				}
+\end{verbatim}
+\end{minipage}\begin{minipage}[t]{0.5\textwidth}
+\subsection{Zuordnen}
+\begin{verbatim}
+\zuordnen{
+				R1={},				% Response 1
+				R2={},				% Response 2
+				R3={},				% Response 3
+				R4={},				% Response 4
+				%% Moegliche Zuordnungen: %%
+				A={}, 				%Moeglichkeit A  
+				B={}, 				%Moeglichkeit B  
+				C={}, 				%Moeglichkeit C  
+				D={}, 				%Moeglichkeit D  
+				E={}, 				%Moeglichkeit E  
+				F={}, 				%Moeglichkeit F  
+				%% LOESUNG: %%
+				A1={},				% 1. richtige Zuordnung
+				A2={},				% 2. richtige Zuordnung
+				A3={},				% 3. richtige Zuordnung
+				A4={},				% 4. richtige Zuordnung
+				}
+\end{verbatim}
+\end{minipage}\leer
+
+\begin{minipage}[t]{0.5\textwidth}
+\subsection{Lösungen}
+\begin{verbatim}
+\antwort{}
+\end{verbatim}
+\end{minipage}\begin{minipage}[t]{0.5\textwidth}
+\subsection{Notenschlüssel}
+\begin{verbatim}
+\notenschluessel{0.91}{0.8}{0.64}{0.5} %mit Prozentangabe
+
+\notenschluesselop{0.91}{0.8}{0.64}{0.5} %ohne Prozentangabe
+
+\beurteilungsraster{0.85}{0.68}{0.5}{1/3}{ % Prozentschluessel
+				T1={24}, 				% Punkte im Teil 1  
+				AP={4}, 				% Ausgleichspunkte aus Teil 2  
+				T2={20}, 				% Punkte im Teil 2
+				}
+
+\end{verbatim}
+\end{minipage}
+
+\end{scriptsize}
+
+\fancyhead{}
+
+\fancyfoot[c]{\begin{footnotesize}Christoph Weberndorfer, Matthias Konzett\\
+lama.helpme@gmail.com\end{footnotesize}}	
+%\fancyfoot[c]{Christoph Weberndorfer und Matthias Konzett\\
+%\hspace{0,5cm} c.weberndorfer@gmail.com und m.s.konzett@gmail.com}	
+\end{document}
