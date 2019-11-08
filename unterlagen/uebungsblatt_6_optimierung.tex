@@ -1,0 +1,163 @@
+\documentclass[a4paper,11pt]{report}
+
+\usepackage{geometry}
+\geometry{a4paper,left=18mm,right=18mm, top=2cm, bottom=2cm}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage[solution_off]{srdp-mathematik} % solution_on/off
+\setcounter{Zufall}{0}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+
+\pagestyle{plain} %PAGESTYLE: empty, plain, fancy
+\onehalfspacing %Zeilenabstand
+\setcounter{secnumdepth}{-1} % keine Nummerierung der Ueberschriften
+
+
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOKUMENT - ANFANG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+\begin{document}
+\section{GeoGebra-Optimierung}\leer
+
+\begin{beispiel}[FA 3.1]{1} %PUNKTE DES BEISPIELS
+Gegeben sind vier Graphen von Potenzfunktionen und sechs Funktionsgleichungen.
+
+Ordne den vier Graphen jeweils die entsprechende Funktionsgleichung (aus A bis F) zu!
+
+\zuordnen{
+				title1={Funktionsgleichungen}, 		%Titel Antwortmoeglichkeiten
+				A={$f(x)=x^2+1$}, 				%Moeglichkeit A  
+				B={$f(x)=x^2-1$}, 				%Moeglichkeit B  
+				C={$f(x)=-x^2+1$}, 				%Moeglichkeit C  
+				D={$f(x)=x^{-2}+1$}, 				%Moeglichkeit D  
+				E={$f(x)=x^{-2}-1$}, 				%Moeglichkeit E  
+				F={$f(x)=-x^{-2}$}, 				%Moeglichkeit F  
+				title2={Graphen},		%Titel Zuordnung
+				R1={\psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3.7992750623912968,-3.776781160825846)(3.7340282377430136,3.7323769364234036)
+\multips(0,-3)(0,1.0){8}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(-3.7992750623912968,0)(3.7340282377430136,0)}
+\multips(-3,0)(1.0,0){8}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(0,-3.776781160825846)(0,3.7323769364234036)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,showorigin=false,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=0]{->}(0,0)(-3.7992750623912968,-3.776781160825846)(3.7340282377430136,3.7323769364234036)[\scriptsize{$x$},140] [\scriptsize{$f(x)$},-40]
+\psplot[linewidth=1.2pt,plotpoints=200]{-3.7992750623912968}{3.7340282377430136}{x^(2.0)-1.0}
+\end{pspicture*}},				%1. Antwort rechts
+				R2={
+\psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3.7992750623912968,-3.776781160825846)(3.7340282377430136,3.7323769364234036)
+\multips(0,-3)(0,1.0){8}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(-3.7992750623912968,0)(3.7340282377430136,0)}
+\multips(-3,0)(1.0,0){8}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(0,-3.776781160825846)(0,3.7323769364234036)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,showorigin=false,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=0]{->}(0,0)(-3.7992750623912968,-3.776781160825846)(3.7340282377430136,3.7323769364234036)[\scriptsize{$x$},140] [\scriptsize{$f(x)$},-40]
+\psplot[linewidth=1.2pt,plotpoints=200]{-3.7992750623912968}{3.7340282377430136}{x^(-2.0)+1.0}
+\end{pspicture*}},				%2. Antwort rechts
+				R3={\psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3.7992750623912968,-3.776781160825846)(3.7340282377430136,3.7323769364234036)
+\multips(0,-3)(0,1.0){8}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(-3.7992750623912968,0)(3.7340282377430136,0)}
+\multips(-3,0)(1.0,0){8}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(0,-3.776781160825846)(0,3.7323769364234036)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,showorigin=false,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=0]{->}(0,0)(-3.7992750623912968,-3.776781160825846)(3.7340282377430136,3.7323769364234036)[\scriptsize{$x$},140] [\scriptsize{$f(x)$},-40]
+\psplot[linewidth=1.2pt,plotpoints=200]{-3.7992750623912968}{3.7340282377430136}{-x^(2.0)+1.0}
+\end{pspicture*}},				%3. Antwort rechts
+				R4={\psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3.7992750623912968,-3.776781160825846)(3.7340282377430136,3.7323769364234036)
+\multips(0,-3)(0,1.0){8}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(-3.7992750623912968,0)(3.7340282377430136,0)}
+\multips(-3,0)(1.0,0){8}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(0,-3.776781160825846)(0,3.7323769364234036)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,showorigin=false,Dx=1.,Dy=1.,ticksize=-2pt 0,subticks=0]{->}(0,0)(-3.7992750623912968,-3.776781160825846)(3.7340282377430136,3.7323769364234036)[\scriptsize{$x$},140] [\scriptsize{$f(x)$},-40]
+\psplot[linewidth=1.2pt,plotpoints=200]{-3.7992750623912968}{3.7340282377430136}{-x^(-2.0)}
+\end{pspicture*}},				%4. Antwort rechts
+				%% LOESUNG: %%
+				A1={B},				% 1. richtige Zuordnung
+				A2={D},				% 2. richtige Zuordnung
+				A3={C},				% 3. richtige Zuordnung
+				A4={F},				% 4. richtige Zuordnung
+				}
+\end{beispiel}
+\newpage
+\pagestyle{fancy}
+
+
+\begin{beispiel}[AN 1.3]{1} %PUNKTE DES BEISPIELS
+			  Das Diagramm beschreibt eine Bewegung:				
+				
+				\begin{center}
+				\psset{xunit=1.0cm,yunit=0.05cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=4pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-0.8,-9)(9.192270531400977,116.1081081081061)
+\multips(0,0)(0,10.0){13}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=darkgray]{c-c}(0,0)(9.192270531400977,0)}
+\multips(0,0)(0.5,0){19}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=darkgray]{c-c}(0,0)(0,116.1081081081061)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1.,Dy=20.,ticksize=-2pt 0,subticks=2]{->}(0,0)(0.,0.)(9.192270531400977,116.1081081081061)
+\psplot[linewidth=1.2pt,plotpoints=200]{0}{2}{-7.5*x^2+30*x}
+\psline[linewidth=1.2pt](2.,30.)(4.5,30.)
+\psplot[linewidth=1.2pt,plotpoints=200]{4.5}{6.02}{10.2536*x^2-92.9016*x+240.4229}
+\psline[linewidth=1.2pt](6,52.2)(7.,80.)
+\psplot[linewidth=1.2pt,plotpoints=200]{7}{9.192270531400977}{-13.7347*x^2+224.7557*x-820.2882}
+\rput[tl](0.22,110){Weg (in m)}
+\rput[tl](7.5,9){Zeit (in s)}
+\end{pspicture*}
+				\end{center}\vspace{-0,2cm}
+				
+				Ordne jeweils jedem Zeitintervall die entsprechende mittlere Geschwindigkeit zu!
+				
+				\zuordnen{
+								R1={$[0;2]$},				% Response 1
+								R2={$[2;4,5]$},				% Response 2
+								R3={$[4,5;7]$},				% Response 3
+								R4={$[7;9]$},				% Response 4
+								%% Moegliche Zuordnungen: %%
+								A={$0$\,m/s}, 				%Moeglichkeit A  
+								B={$5$\,m/s}, 				%Moeglichkeit B  
+								C={$10$\,m/s}, 				%Moeglichkeit C  
+								D={$15$\,m/s}, 				%Moeglichkeit D  
+								E={$20$\,m/s}, 				%Moeglichkeit E  
+								F={$25$\,m/s}, 				%Moeglichkeit F  
+								%% LOESUNG: %%
+								A1={D},				% 1. richtige Zuordnung
+								A2={A},				% 2. richtige Zuordnung
+								A3={E},				% 3. richtige Zuordnung
+								A4={B},				% 4. richtige Zuordnung
+								}
+\end{beispiel}
+
+\begin{beispiel}[FA 1.6]{1} %PUNKTE DES BEISPIELS
+Die Abbildung zeigt die Graphen der Erlös- und Kostenfunktion eines Betriebes.
+
+Interpretiere die Koordinaten der Schnittpunkte in diesem Kontext!
+
+\begin{center}
+\psset{xunit=0.1cm,yunit=0.02cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-14,-29.294042407198404)(108.54742813165333,324.82633259103704)
+\multips(0,0)(0,50.0){8}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=darkgray]{c-c}(0,0)(108.54742813165333,0)}
+\multips(0,0)(10.0,0){12}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=darkgray]{c-c}(0,0)(0,324.82633259103704)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=false,Dx=10.,ticksize=-2pt 0,subticks=0]{->}(0,0)(0.,0)(108.54742813165333,324.82633259103704)[\scriptsize Stück,140] [,-40]
+\psaxes[labelFontSize=\scriptstyle,xAxis=false,yAxis=true,Dy=50.,ylabelFactor=\,000, showorigin=false,ticksize=-2pt 0,subticks=2]{->}(0,0)(0.,0)(108.54742813165333,324.82633259103704)[,140] [\scriptsize Euro,-40]
+\psplot[linewidth=0.8pt,plotpoints=200]{0}{101.5}{-0.1*x^(2.0)+10.0*x}
+\psplot[linewidth=0.8pt]{0}{100}{3.030492906931785*x+58.76467703284807}
+\begin{scriptsize}
+\rput[tl](71.31716865751105,267.68221339816773){Kostenfunktion}
+\rput[tl](85.51661645695135,140){Erlösfunktion}
+\rput[tl](35,273){$E_{max}=(50\mid 250\,000)$}
+\psdots[dotsize=5pt 0,dotstyle=*](0.,0.)
+\psdots[dotsize=5pt 0,dotstyle=*](50.,250.)
+\psdots[dotsize=5pt 0,dotstyle=*](100.,0.)
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+\antwort{Break-Even-Points:
+
+Bei einem Absatz von 10 Stück bzw. von 60 Stück sind die Produktionskosten gleich dem Erlös (ca. 80\,000\,\euro bzw. ca. 240\,000\,\euro). Der Betrieb macht bei diesen Absatzmengen weder Gewinn noch Verlust.}
+\end{beispiel}
+
+\fancyhead{}
+
+\fancyfoot[c]{\begin{footnotesize}Christoph Weberndorfer, Matthias Konzett\\
+lama.helpme@gmail.com\end{footnotesize}}	
+%\fancyfoot[c]{Christoph Weberndorfer und Matthias Konzett\\
+%\hspace{0,5cm} c.weberndorfer@gmail.com und m.s.konzett@gmail.com}	
+\end{document}
