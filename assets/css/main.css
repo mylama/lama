@@ -3417,5 +3417,32 @@ input, select, textarea {
 			color: #fff200;
 		} */
 
+		.tooltip {
+			position: relative;
+			display: inline-block;
+			border-bottom: 1px dotted black;
+		  }
+		  
+		  .tooltip .tooltiptext {
+			visibility: hidden;
+			width: 120px;
+			background-color: black;
+			color: #fff;
+			text-align: left;
+			border-radius: 6px;
+			padding: 5px 0;
+			font-size: small;
+			
+			/* Position the tooltip */
+			position: absolute;
+			z-index: 1;
+			top: 100%;
+			left: 50%;
+			margin-left: -60px;
+		  }
+		  
+		  .tooltip:hover .tooltiptext {
+			visibility: visible;
+		  }
 		
 	
