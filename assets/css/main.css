@@ -3420,14 +3420,14 @@ input, select, textarea {
 		.tooltip {
 			position: relative;
 			display: inline-block;
-			border-bottom: 1px dotted black;
+			
 		  }
 		  
 		  .tooltip .tooltiptext {
 			visibility: hidden;
 			width: 120px;
-			background-color: black;
-			color: #fff;
+			background-color: rgb(217,255,215);
+			color: black;
 			text-align: match-parent;
 			border-radius: 6px;
 			padding: 5px 0;
