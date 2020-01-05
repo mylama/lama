@@ -3428,10 +3428,12 @@ input, select, textarea {
 			width: 120px;
 			background-color: black;
 			color: #fff;
-			text-align: left;
+			text-align: match-parent;
 			border-radius: 6px;
 			padding: 5px 0;
 			font-size: small;
+			line-height: 70%;
+			
 			
 			/* Position the tooltip */
 			position: absolute;
