@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 #### Version number ###
-__version__ = "v1.8.5"
-__lastupdate__ = "01/20"
+__version__ = "v1.8.6"
+__lastupdate__ = "02/20"
 ####################
 
 from PyQt5 import QtCore, QtWidgets, QtGui
@@ -26,7 +26,7 @@ import yaml
 from PIL import Image  ## pillow
 import smtplib
 
-# from config import config_loader, path_programm, logo_path
+#from config import config_loader, path_programm, logo_path
 # from list_of_widgets import (
 #     widgets_search,
 #     widgets_create,
@@ -46,11 +46,7 @@ except IndexError:
 
 print("Loading...")
 
-
-# print(path_programm)
-# print(os.path.dirname(sys.argv[0]))
-
-# Load Config-file
+### config_loader, path_programm, logo_path
 def config_loader(pathToFile, parameter):
     for i in range(5):
         try:
@@ -87,7 +83,13 @@ if sys.platform.startswith("darwin"):
 logo_path = os.path.join(
     path_programm, "_database", "_config", "icon", "LaMa_icon_logo.png"
 )
-####
+
+
+
+if sys.platform.startswith("darwin"):
+    if path_programm is "":
+        path_programm = "."
+
 
 config_file = os.path.join(path_programm, "_database", "_config", "config1.yml")
 
@@ -111,6 +113,7 @@ set_chosen_gk = set([])
 list_sage_examples = []
 
 
+### list_of_widgets
 widgets_search = [
     "actionReset",
     "actionLoad",
@@ -183,11 +186,13 @@ widgets_feedback = [
 ]
 
 
+
 class SpinBox_noWheel(QtWidgets.QSpinBox):
     def wheelEvent(self, event):
         event.ignore()
 
 
+### translate
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -207,7 +212,6 @@ except AttributeError:
 
     def _translate(context, text, disambig):
         return QtWidgets.QApplication.translate(context, text, disambig)
-
 
 #### Dialogue Window -- Titelblatt anpassen
 class Ui_Dialog_titlepage(object):
@@ -375,7 +379,6 @@ class Ui_Dialog_titlepage(object):
 
         return dict_titlepage
 
-
 #### Dialog Window - Ausgleichspunkte
 class Ui_Dialog_ausgleichspunkte(object):
     def setupUi(
@@ -513,7 +516,7 @@ class Ui_Dialog_ausgleichspunkte(object):
         # self.list_sage_ausgleichspunkte_chosen=list_sage_ausgleichspunkte_chosen
         return list_sage_ausgleichspunkte_chosen
 
-
+### sort_items
 def atoi(text):
     return int(text) if text.isdigit() else text
 
@@ -521,7 +524,7 @@ def atoi(text):
 def natural_keys(text):
     return [atoi(c) for c in re.split("(\d+)", text)]
 
-
+### create_pdf
 def create_pdf(path_file, index, maximum, typ=0):
     if sys.platform.startswith("linux"):
         pass
@@ -562,8 +565,10 @@ def create_pdf(path_file, index, maximum, typ=0):
                 ),
                 shell=True,
             ).wait()
+            #subprocess.Popen('cd "{0}/Teildokument" ; okular "{1}.pdf"'.format(path_programm, dateiname),shell=True)
+            #subprocess.Popen('cd "{0}/Teildokument" ; xdg-open "{1}.pdf"'.format(path_programm, dateiname),shell=True)
             subprocess.run(
-                [
+                [   "sudo",
                     "xdg-open",
                     "{0}/Teildokument/{1}.pdf".format(path_programm, dateiname),
                 ]
@@ -661,7 +666,6 @@ def create_pdf(path_file, index, maximum, typ=0):
         msg.close()
 
     QtWidgets.QApplication.restoreOverrideCursor()
-
 
 #### Dialog Window - Schularbeit erstellen
 class Ui_Dialog_erstellen(object):
@@ -2645,8 +2649,11 @@ class Ui_MainWindow(object):
                     if sys.platform.startswith("linux") or sys.platform.startswith(
                         "darwin"
                     ):
-                        os.system("chmod 777 {}".format(filename_update))
-                        os.system(filename_update)
+                        if extension=='.py':
+                            os.system("python3 {}".format(filename_update))  
+                        else:  
+                            os.system("chmod 777 {}".format(filename_update))
+                            os.system(filename_update)
                     else:
                         os.startfile(filename_update)
                     sys.exit(0)
@@ -5218,7 +5225,7 @@ class Ui_MainWindow(object):
                 )
             )
             x = eval("self.groupBox_bsp_{}".format(bsp_string))
-            x.setMaximumSize(QtCore.QSize(16777215, 120))
+            # x.setMaximumSize(QtCore.QSize(16777215, 200))
             x.setObjectName("groupBox_bsp_{}".format(bsp_string))
             if (list_sage_examples.index(all) % 2) == 0 and typ == 1:
                 x.setStyleSheet(_fromUtf8("background-color: rgb(255, 255, 255);"))
