@@ -10,37 +10,49 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="LaMA_favicon.ico" />
+
+		<style type="text/css">
+			.mobileHide { display: inline; } 
+		  
+			/* Smartphone Portrait and Landscape */ 
+			@media only screen 
+			  and (min-device-width : 320px) 
+			  and (max-device-width : 480px){ 
+			   .mobileHide { display: none;}
+			}
+		  </style>
+
+<style type="text/css"> 
+	.mobileShow {display: none;} 
+  
+	/* Smartphone Portrait and Landscape */ 
+	@media only screen 
+	  and (min-device-width : 320px) 
+	  and (max-device-width : 480px){ 
+		.mobileShow {display: inline;}
+	}
+  </style>
+
+
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header">
+			<div id="header">
 
-					<!-- Logo -->
-					<center><a href="index.html"><img src="images/lama_logo.svg" alt="LaMA-Logo"
-						style="max-height: 150px;"></a></center>
-						<!-- <h1><a href="index.html" id="logo">LaMA - LaTeX Mathematik Assistent</a></h1> -->
+				<!-- Logo -->
+				<center><a href="http://lama.schule"><img src="images/lama_logo.svg" alt="LaMA-Logo"
+					style="max-height: 150px;"></a></center>
+					<!-- <h1><a href="index.html" id="logo">LaMA - LaTeX Mathematik Assistent</a></h1> -->
 
-						<div class="mobileShow">
-							<h1><a href="index.html" id="logo">LaMA - LaTeX Mathematik Assistent</a></h1></div>
+					<div class="mobileShow">
+						<h1><a href="http://lama.schule" id="logo">LaMA - LaTeX Mathematik Assistent</a></h1></div>
 
-					<!-- Nav -->
-					<nav id="nav">
-							<div class="mobileShow">
-									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="news.html">News & Updates</a></li>
-										<li><a href="downloads.html">Downloads & Installation</a></li>
-										<li><a href="team.html">Das Team</a></li>
-										<li><a href="videos.html">Anleitung & Videos</a></li>
-										<li><a href="unterstuetzen.html">Unterstützen</a></li>
-										<li><a href="faq.html">FAQ</a></li>
-										</ul>
-										</div>
-						</nav>
+				<!-- Nav -->
+				<nav id="nav"></nav>
 
-				</div>
+			</div>
 
 			<!-- Banner -->
 			<!-- <center><img src="LaMA_logo.png" alt="LaMA-Logo"
@@ -84,50 +96,9 @@
 				</section> -->
 
 			<!-- Gigantic Heading -->
-				
-
-				<section class="wrapper style2">
-					<div class="container">
-						<header class="major">
-							<h2>Neues srdp-mathematik Update</h2>
-							<p>Aufgrund des veränderten Layouts der standardisierten Reifeprüfung seit dem letzten Haupttermin, mussten Änderungen am LaTeX-Paket vorgenommen werden. Deshalb ist es nun notwendig das Paket wie folgt upzudaten.</p>
-						</header>
-					</div>
-				</section>
-
-				<section class="wrapper style1" cursor:context-menu;>
-					<div class="container">
-					<b>Windows:</b>	
-					<ol>
-					<li>Öffne den Explorer und gib in die Suchleiste: "srdp-mathematik.sty" ein. (<a href="http://lama.schule/bfbupdate1.html" target="_blank" style="text-decoration:none; color:#0645AD">Bilderklärung</a>)</li>
-						<it>Dies kann einige Minuten dauern. Sollte es nach 5 Minuten noch keinen Treffer geben, kann man es auch mit "name: srdp-mathematik.sty" probieren (<a href="http://lama.schule/bfbupdate2.html" target="_blank" style="text-decoration:none; color:#0645AD">Bilderklärung</a>)</it>
-
-					<li>Rechtsklick und dann auf "Dateipfad öffnen" klicken</li>
-
-					<li>Nun von hier das neue Paket herunterladen: <a href="programme/srdp-mathematik.sty" target="_blank" style="text-decoration:none; color:#0645AD">srdp-mathematik.sty</a></li>
-
-					<li>Abschließend die alte "srdp-mathematik.sty" durch die neue (gerade heruntergeladene) Version ersetzen.</li>
-					</ol><br>
-
-					<b>Mac:</b>	
-					<ol>
-					<li>"Gehe zu" auswählen (<a href="http://lama.schule/bfbmacupdate1.html" target="_blank" style="text-decoration:none; color:#0645AD">Bilderklärung</a>)</li>
-						
-					<li>alt-Taste drücken, damit der Ordner "Library" erscheint</li>
-
-					<li>"Library" auswählen </li>
-
-					<li>In die Suchleiste "srdp-mathematik.sty" eingeben (<a href="http://lama.schule/bfbmacupdate2.html" target="_blank" style="text-decoration:none; color:#0645AD">Bilderklärung</a>)</li>
-
-					<li>In der grauen Leiste über den Dateien "Library" auswählen (<a href="http://lama.schule/bfbmacupdate3.html" target="_blank" style="text-decoration:none; color:#0645AD">Bilderklärung</a>)</li>
-
-					<li>Rechtsklick auf die gefundene Datei und "In übergeordnetem Ordner anzeigen" auswählen (<a href="http://lama.schule/bfbmacupdate4.html" target="_blank" style="text-decoration:none; color:#0645AD">Bilderklärung</a>)</li>
-
-					<li>Nun von hier das neue Paket herunterladen: <a href="programme/srdp-mathematik.sty" target="_blank" style="text-decoration:none; color:#0645AD">srdp-mathematik.sty</a></li>
-
-					<li>Abschließend die alte "srdp-mathematik.sty" durch die neue (gerade heruntergeladene) Version ersetzen. (<a href="http://lama.schule/bfbmacupdate4.html" target="_blank" style="text-decoration:none; color:#0645AD">Bilderklärung</a>)</li>
-					</ol>
-					</div>
+				<section class="wrapper style1">
+								<center><img src="images/updatemac5.jpeg" alt="MiKTeX-1" /></center>
+								
 				</section>
 
 			<!-- Posts -->
