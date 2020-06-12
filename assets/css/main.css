@@ -110,13 +110,13 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
-		color:rgb(217,255,215);
+		color:rgb(168,189,194);
 		text-decoration: none;
 		border-bottom: none;
 	}
 
 		a:hover {
-			color: rgb(217,255,215);
+			color: rgb(168,189,194);
 			border-bottom-color: transparent;
 		}
 
@@ -2040,7 +2040,7 @@ input, select, textarea {
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		textarea:focus {
-			border-color: rgb(217,255,215);
+			border-color: rgb(168,189,194);
 		}
 
 	input[type="text"],
@@ -2145,7 +2145,7 @@ input, select, textarea {
 		.icon.major {
 			text-align: center;
 			cursor: default;
-			background-color: rgb(217,255,215);
+			background-color: rgb(168,189,194);
 			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
@@ -2413,7 +2413,7 @@ input, select, textarea {
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 		background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-		background-color: rgb(217,255,215);
+		background-color: rgb(168,189,194);
 		border-radius: 5px;
 		border: 0;
 		color: #fff;
@@ -2610,7 +2610,7 @@ input, select, textarea {
 						bottom: -0.5em;
 						left: 50%;
 						margin-left: -0.375em;
-						background-color: rgb(217,255,215);
+						background-color: rgb(168,189,194);
 						background-image: url("images/bg01.png");
 					}
 					
@@ -2734,7 +2734,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: rgb(217,255,215);
+			background-color: rgb(168,189,194);
 			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
@@ -2748,7 +2748,7 @@ input, select, textarea {
 			}
 
 				.wrapper.style3 .button:hover {
-					color: rgb(217,255,215) !important;
+					color: rgb(168,189,194) !important;
 				}
 	
 	.wrappert {
@@ -2789,7 +2789,7 @@ input, select, textarea {
 		}
 
 			#footer a:hover {
-				color: rgb(217,255,215);
+				color: rgb(168,189,194);
 				border-bottom-color: transparent;
 			}
 
@@ -3075,7 +3075,7 @@ input, select, textarea {
 				background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
 				height: 44px;
 				line-height: 44px;
-				box-shadow: 0 4px 0 0 rgb(217,255,215);
+				box-shadow: 0 4px 0 0 rgb(168,189,194);
 			}
 
 				#titleBar .title {
@@ -3426,7 +3426,7 @@ input, select, textarea {
 		  .tooltip .tooltiptext {
 			visibility: hidden;
 			width: 120px;
-			background-color: rgb(217,255,215);
+			background-color: rgb(168,189,194);
 			color: black;
 			text-align: match-parent;
 			border-radius: 6px;
