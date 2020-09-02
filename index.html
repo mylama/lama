@@ -14,6 +14,27 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="LaMA_favicon.ico" />
 
+		<style type="text/css">
+			.mobileHide { display: inline; } 
+		  
+			/* Smartphone Portrait and Landscape */ 
+			@media only screen 
+			  and (min-device-width : 320px) 
+			  and (max-device-width : 480px){ 
+			   .mobileHide { display: none;}
+			}
+		  </style>
+
+<style type="text/css"> 
+	.mobileShow {display: none;} 
+  
+	/* Smartphone Portrait and Landscape */ 
+	@media only screen 
+	  and (min-device-width : 320px) 
+	  and (max-device-width : 480px){ 
+		.mobileShow {display: inline;}
+	}
+  </style>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -111,6 +132,26 @@
 
 			<!-- Gigantic Heading -->
 				<section class="wrapper style2">
+					<div class="mobileHide">
+					<div class="container">
+						<header class="major">
+								
+							<h2>LaMA - LaTeX Mathematik Assistent-3</h2>
+							
+							<p>
+								LaMA ermöglicht AHS-Mathematiklehrer:innen das systematische Abspeichern und Suchen von Typ-1 und Typ-2 Aufgaben und erleichtert das Erstellen von Schularbeiten.
+							</p>
+
+							<center>								
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/OH7mdZUYwPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</center>
+
+						
+						</header>
+					</div>
+				</div>
+
+				<div class="mobileShow">
 					<div class="container">
 						<header class="major">
 								
@@ -118,20 +159,18 @@
 							
 							<p>
 								LaMA ermöglicht AHS-Mathematiklehrer:innen das systematische Abspeichern und Suchen von Typ-1 und Typ-2 Aufgaben und erleichtert das Erstellen von Schularbeiten.
-							</p>
+							</p><br>
 
-							<h2></h2>
-						</header>
-
-							<center>
-								<h2>Version 2.0 ist online!</h2>
-				
-								<p>Man kann nun zwischen LaMA (Oberstufenversion) und LaMA-Cria (Unterstufenversion) wechseln!</p>
-				
-								<img src="images/entscheidung.JPG" alt="" /></center>
+							<center>								
+								<iframe src="https://www.youtube.com/embed/OH7mdZUYwPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</center>
 						
+						</header>
 					</div>
+				</div>
 				</section>
+			
+					
 
 
 			<!-- <section class="wrapper stylesheet">
