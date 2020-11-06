@@ -97,13 +97,8 @@
 
 				<section class="wrapper style1" cursor:context-menu;>
 					<div class="container">
-					<form action="mailto:lama.helpme@gmail.com" method="GET" enctype="text/plain" autocomplete="off">
-					<p>Name: <input name="name"></p>
-					<p>Mail: <input name="email"></p>
-					<p>Wie bist du auf LaMA gestoßen? <input name="notiz"></p>
-					<input type="submit" value="Abschicken">
-					<input type="reset" value="Löschen">
-					</form>
+						<form method="post" action="http://lama.schule" accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};"> Name <br /> 
+						<input name="realname" /> <br /> E-Mail <br /> <input name="email" /> <br /> Nachricht <br /> <textarea cols="40" rows="10" name="Message"></textarea> <br /> <input type="submit" value="Senden" /> <input type="hidden" name="recipient" value="lama.helpme@gmail.com" /> <input type="hidden" name="subject" value="Subject" /> <input type="hidden" name="redirect" value="http://www.example.com/danke.html" /> <input type="hidden" name="missing_fields_redirect" value="http://www.example.com/error.html" /> <input type="hidden" name="required" value="realname,email,Message" /> </form>
 					</div>
 				</section>
 
