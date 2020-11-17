@@ -3458,19 +3458,5 @@ input, select, textarea {
 		  .tooltip:hover .tooltiptext {
 			visibility: visible;
 		  }
-
-		  #filters input {
-			display: none;
-		  }
-		  
-		  #filters label {
-			display: inline-block;
-			padding: 0.25em 1em;
-			border: 2px solid transparent;
-		  }
-		  
-		  #filters :checked + label {
-			border: 2px solid blue;
-		  }
 		
 	
