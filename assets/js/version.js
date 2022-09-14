@@ -1,6 +1,6 @@
     "use strict";
-    let version = "3.4.3";
-    let datum = "März 2022";
+    let version = "4.0.0";
+    let datum = "September 2022";
     
     document.getElementById("vnummer").innerHTML = version;
     document.getElementById("vdatum").innerHTML = datum;
