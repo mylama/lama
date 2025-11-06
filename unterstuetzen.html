@@ -42,48 +42,7 @@
 
 				</div>
 
-			<!-- Banner -->
-			<!-- <center><img src="LaMA_logo.png" alt="LaMA-Logo"
-					style="max-height: 250px;"></center> -->
-				<!-- <section id="banner"> -->
-					<!-- <header>
-						<h2> LateX Mathematik Assistent <em>  <a href="http://html5up.net">HTML5 UP</a></em></h2>
-						<a href="#" class="button">Learn More</a>
-					</header> -->
-				
-
-				
-
-			<!-- Highlights
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row gtr-200">
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon major fa-paper-plane"></i>
-									<h3>Einleitung</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</section>
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon major fa-pencil"></i>
-									<h3>Downloads</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</section>
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon major fa-wrench"></i>
-									<h3>Über uns</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</section>
-						</div>
-					</div>
-				</section> -->
-
-			<!-- Gigantic Heading -->
+			
 			<section class="wrapper style2">
 				<div class="container">
 					<header class="major">
@@ -122,63 +81,133 @@
 			</section>
 
 
+			<!-- Zitatabschnitt -->
+<section class="wrapper style1 special">
+  <div class="container">
+    <figure class="quote-block">
+      <blockquote>
+        <p>Ich bin von diesem Produkt sehr überzeugt und verwende es gerne, da es mir sehr viel Arbeit abnimmt.</p>
+      </blockquote>
+      <figcaption>– Nicolas</figcaption><br>
+
+	  <blockquote>
+        <p>Danke euch für das tolle Programm, es macht super viel Spaß damit zu arbeiten und hilft mir extremst beim Erstellen von Schularbeiten.</p>
+      </blockquote>
+      <figcaption>– Fabio</figcaption><br>
+
+	  <blockquote>
+        <p>Danke dafür, dass ihr dieses Projekt weiterführt. Es hat mein Leben geändert, möglicherweise habe ich dank LaMA noch nicht gekündigt :D</p>
+      </blockquote>
+      <figcaption>– Charlotte</figcaption><br>
+
+	  <blockquote>
+        <p>Herzlichen Dank nochmals für eure ganze Arbeit am LaMA und die sehr hilfreiche Fortbildung.</p>
+      </blockquote>
+      <figcaption>– Martina</figcaption><br>
+
+	  <blockquote>
+        <p>Mit großer Freude und Begeisterung nutze ich schon seit einigen Jahren LaMA zur Gestaltung von Arbeitsblättern und Schularbeiten im Mathematikunterricht.</p>
+      </blockquote>
+      <figcaption>– Stefan</figcaption><br>
+
+	  <blockquote>
+        <p>Ich bin so hyped bei dem ganzen Programm.</p>
+      </blockquote>
+      <figcaption>– Jakob</figcaption>
+    </figure>
+  </div>
+</section>
+
+<style>
+  /* Zentriertes Zitat mit großen Anführungszeichen */
+  .quote-block {
+    position: relative;
+    max-width: 60ch;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1rem 3rem;
+    font-family: "Georgia", serif;
+    color: #333;
+  }
+
+  /* große Anführungszeichen */
+  .quote-block::before,
+  .quote-block::after {
+    content: "“";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    color: #ccc;
+    opacity: 0.25;
+    pointer-events: none;
+    user-select: none;
+    line-height: 1;
+  }
+
+  .quote-block::before {
+    top: -1.8rem; /* mehr Abstand nach oben */
+  }
+
+  .quote-block::after {
+    content: "”";
+    bottom: -3.5rem; /* mehr Abstand nach unten */
+  }
+
+  /* Blockquote und Text */
+  .quote-block blockquote {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .quote-block blockquote p {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* Autor (minimaler Abstand) */
+  .quote-block figcaption {
+    margin-top: 0.1em !important; /* wirklich sehr eng */
+    font-size: 1rem;
+    color: #777;
+    font-style: italic;
+    line-height: 1.2;
+  }
+
+  /* responsive Anpassung */
+  @media (max-width: 600px) {
+    .quote-block {
+      padding: 2.5rem 1rem 2.5rem;
+    }
+    .quote-block::before,
+    .quote-block::after {
+      font-size: 3.5rem;
+      top: -1rem;
+      bottom: -1rem;
+    }
+    .quote-block blockquote p {
+      font-size: 1.1rem;
+    }
+    .quote-block figcaption {
+      margin-top: 0.1em !important;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+
+
 
 			
 			<!-- Footer -->
 				<div id="footer">
 						<center>Fragen, Anregungen, Wünsche:</center>
 						<center>lama.helpme(at)gmail.com</center><br>
-					<!-- <div class="container">
-						<div class="row"> -->
-							<!-- <section class="col-3 col-6-narrower col-12-mobilep">
-								<h3>Links to Stuff</h3>
-								<ul class="links">
-									<li><a href="#">Mattis et quis rutrum</a></li>
-									<li><a href="#">Suspendisse amet varius</a></li>
-									<li><a href="#">Sed et dapibus quis</a></li>
-									<li><a href="#">Rutrum accumsan dolor</a></li>
-									<li><a href="#">Mattis rutrum accumsan</a></li>
-									<li><a href="#">Suspendisse varius nibh</a></li>
-									<li><a href="#">Sed et dapibus mattis</a></li>
-								</ul>
-							</section>
-							<section class="col-3 col-6-narrower col-12-mobilep">
-								<h3>More Links to Stuff</h3>
-								<ul class="links">
-									<li><a href="#">Duis neque nisi dapibus</a></li>
-									<li><a href="#">Sed et dapibus quis</a></li>
-									<li><a href="#">Rutrum accumsan sed</a></li>
-									<li><a href="#">Mattis et sed accumsan</a></li>
-									<li><a href="#">Duis neque nisi sed</a></li>
-									<li><a href="#">Sed et dapibus quis</a></li>
-									<li><a href="#">Rutrum amet varius</a></li>
-								</ul>
-							</section> -->
-							<!-- <section class="col-6 col-12-narrower">
-								<h3>Kontakt</h3>
-								<form action="mailto:lama.helpme@gmail.com" method="post" enctype="text/plain">
-									<div class="row gtr-50">
-										<div class="col-6 col-12-mobilep">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="col-6 col-12-mobilep">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="col-12">
-											<textarea name="message" id="message" placeholder="Nachricht" rows="5"></textarea>
-										</div>
-										<div class="col-12">
-											<ul class="actions">
-												<li><input type="submit" class="button alt" value="Nachricht senden" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</section> -->
-						<!-- </div>
-					</div> -->
-
-					<!-- Icons -->
+				
 					<ul class="icons">
 							<!-- <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li> -->
 							<li><a href="https://www.facebook.com/LaMA-372359700034754/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
