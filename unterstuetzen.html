@@ -54,31 +54,54 @@
 						<h2>Danke!</h2>
 						<p>Ein großes Dankeschön von uns an all jene die uns bisher (finanziell) unterstützt haben! Wir sind froh, dass LaMA den Arbeitsalltag für euch erleichtert. Wir betreiben das Programm in unserer Freizeit, um genau das zu erreichen und freuen uns deshalb sehr über eure Unterstützung.<br><br>
 						
-						Florian R.<br>
-						Sebastian L.<br>
-						Werner K.<br>
-						Jakob L.<br>
-						Someone<br>
-						Fabio R.<br>
-						Robin R.<br>
-						Felix Z.<br>
-						Georg B.<br>
-						Andrea G.<br>
-						Sarah Z.<br>
-						Christa H.<br>
-						Jakob L.<br>
-						Barbara W.<br>
-						Ursula A.<br>
-						Johannes B.<br>
-						Katharina S.<br>
-						Sarina P.<br>
-						Johannes H.<br></p>
-					
+						<div class="name-grid">
+        <div>Martina L.</div>
+        <div>Lorenz H.</div>
+        <div>Florian R.</div>
+        <div>Sebastian L.</div>
+        <div>Werner K.</div>
+        <div>Jakob L.</div>
+        <div>Someone</div>
+        <div>Fabio R.</div>
+        <div>Robin R.</div>
+        <div>Felix Z.</div>
+        <div>Georg B.</div>
+        <div>Andrea G.</div>
+        <div>Sarah Z.</div>
+        <div>Christa H.</div>
+        <div>Jakob L.</div>
+        <div>Barbara W.</div>
+        <div>Ursula A.</div>
+        <div>Johannes B.</div>
+        <div>Katharina S.</div>
+        <div>Sarina P.</div>
+        <div>Johannes H.</div>
+      </div>
 					
 					</header>
 					
 				</div>
 			</section>
+
+			<style>
+  .name-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem 2rem;
+    margin-top: 1rem;
+    text-align: left;
+  }
+
+  .name-grid div {
+    padding: 0.2rem 0;
+  }
+
+  @media (max-width: 600px) {
+    .name-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
 
 
 			<!-- Zitatabschnitt -->
