@@ -97,18 +97,134 @@
 				<section class="wrapper style1">
 						<div class="container">
 
-							<h2>Aktuelles:</h2>
+							<!-- <h2>Aktuelles:</h2>
 							<p>Ab dem Wintersemester 2022/23 findet ein Seminar an der PH Wien mit dem Titel "LaMA. Schularbeiten und Übungszettel leicht und schnell erstellt" statt. Im Zuge der Lehrveranstaltung wird der Umgang mit LaMA und seinen Funktionen erlernt.<br>
 								<a href="https://www.ph-online.ac.at/ph-wien/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/291030?$ctx=design=ca;lang=de&$scrollTo=toc_overview" target="_blank" style="text-decoration:none; color:#0645AD">Mehr Informationen</a>
 								
 								
-							</p>
+							</p> -->
 						
 
 					<h2>Versionsverlauf:</h2>
 					<ul style="list-style-type: square;">
-					<h3>v4.1.4</h3>
+					
+					<h3>v5.0.0</h3>
+					<li>install LaTeX Distribution with LaMA, to enable easy download and installation of LaMA</li>
 
+					<h3>v4.7.3</h3>
+					<li>bug fix: different versions of srdp-mathematik.sty error on mac</li>
+
+					<h3>v4.7.2</h3>
+					<li>bug fix: config file not found</li>
+
+					<h3>v4.7.1</h3>
+					<li>bug fix: Permission error when updating DDB on Windows. DDB moved to AppData</li>
+					<li>bug fix: Wrong label in WW (Stellenwert)</li>
+
+					<h3>v4.7.0</h3>
+					<li>New function in WorksheetWizard: ggT & kgV</li>
+					<li>new: change size of solutions in WW</li>
+					<li>bug fix: error when creating PFZ</li>
+					<li>bug fixes</li>
+
+					<h3>v4.6.6</h3>
+					<li>restructure "Zusatzthemen"</li>
+					<li>bug fixes</li>
+
+					<h3>v4.6.5</h3>
+					<li>bug fix</li>
+
+					<h3>v4.6.4</h3>
+					<li>bug fixes</li>
+
+					<h3>v4.6.3</h3>
+					<li>enable sending service files to developer to ensure better support</li>
+					<li>bug fixes</li>
+
+					<h3>v4.6.2</h3>
+					<li>bug fix</li>
+
+					<h3>v4.6.1</h3>
+					<li>bug fix: upload content for database not working properly</li>
+					<li>bug fix: WW single_subtraction not working</li>
+					<li>enable/disable date, when titlepage is switched off</li>
+					<li>bug fix: change to German commas in solution of WW</li>
+					<li>bug fix: error when no image and not titlepage is selected</li>
+					<li>bug fix: gaps in binomials</li>
+					<li>enable automatic group creation from LaTeX file</li>
+					<li>bug fix: double images are added in sage</li>
+					<li>bug fix: avoid futile brackets in WW</li>
+					<li>bug fix: import examples with images</li>
+					<li>bug fix: errors in WW</li>
+					<li>bug fix: rechoose nonogramm, when too small</li>
+					<li>bug fix: roman numerals</li>
+					<li>bug fix: steps number line</li>
+
+					<h3>v4.6.0</h3>
+					<li>new Worksheet Wizard: Primefactorization</li>
+					<li>bug fix: escape KeyError for broken examples creator</li>
+					<li>bug fix: hide & shoe items</li>
+					<li>bug fix: wizard coordinate system - turn off nonogramm</li>
+					<li>bug fix: 'beurteilung' not assigned</li>
+					<li>bug fix: number line starting value</li>
+					<li>bug fix: wizard error create coordinates system</li>
+					<li>bug fix: raise error, if SA name cannot be changed</li>
+					<li>bug fix: do not reset solution_off to solution_on</li>
+
+					<h3>v4.5.2</h3>
+					<li>bug fix: error create coordinate system</li>
+
+					<h3>v4.5.1</h3>
+					<li>bug fix: Error when creating Add/Subtract worksheets with wizard</li>
+					<li>bug fix: Occasional error when creating example with division with 0</li>
+
+					<h3>v4.5.0</h3>
+					<li>new: date can no be set "empty"</li>
+					<li>new: titlepage can now be changed individually</li>
+					<li>bug fix: check for newest update</li>
+					<li>bug fix: deleted logo</li>
+					<li>bug fix: convert png to eps</li>
+
+					<h3>v4.4.1</h3>
+					<li>bug fix: load LaMA files</li>
+
+					<h3>v4.4.0</h3>
+					<li>new: Worksheet Wizard: "Zahlenstrahl"</li>
+					<li>new: enable half points for examples</li>
+					<li>bug fix: images with underscores</li>
+					<li>bug fix: edit english content</li>
+					<li>bug fix: hide developer mode when not active</li>
+					<li>bug fix: progress window for loading LaMA files</li>
+					<li>bug fix: eliminate MacOS Font Warning</li>
+					<li>bug fix: enumerate ww coordinates</li>
+
+					<h3>v4.3.0</h3>
+					<li>new: Worksheet Wizard: "Stellenwerte"</li>
+					<li>new: Worksheet Wizard: "Roman Numerals"</li>
+					<li>new: Worksheet Wizard: "Coordinate System"</li>
+					<li>change of refresh_ddb window</li>
+					<li>bug fix: resort items Sek1</li>
+					<li>bug fix: edit file, when topic exists</li>
+
+					<h3>v4.2.1</h3>
+					<li>bug fix: create dirs on MacOS</li>
+					<li>bug fix: rewrite "_" in title for LaTeX</li>
+					
+					<h3>v4.2.0</h3>
+					<li>new: create worksheet for binomial expansions in Worksheet Wizard</li>
+					<li>bug fix: correct chosen_program, when changed</li>
+					<li>bug fix: edit local saved examples</li>
+
+					<h3>v4.1.5</h3>
+					<li>enable hide/show date in custom sage</li>
+					<li>enable hide/show name</li>
+					<li>bug fix: wrong initial subchapters in cria creator</li>
+					<li>bug fix: error, when latex distribution not installed</li>
+					<li>bug fix: refresh_ddb, when srdp-package is updated</li>
+					<li>bug fix: refresh_ddb, when json.decodeerror occurs</li>
+					<li>bug fix: worksheet wizard - multiplication</li>
+
+					<h3>v4.1.4</h3>
 					<li>bug fix: error when typ2 individual edit is opened in user mode</li><br>
 					
 					<h3>v4.1.3</h3>
