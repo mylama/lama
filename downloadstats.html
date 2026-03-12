@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>GitHub Release Download Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body{
+ font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
+ background:linear-gradient(135deg,#eef2f7,#dfe7f1);
+ margin:0;
+ padding:40px;
+}
+.container{
+ max-width:1000px;
+ margin:auto;
+ background:white;
+ padding:30px 40px;
+ border-radius:16px;
+ box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+h1{margin-top:0;font-size:28px}
+.controls{margin-bottom:20px}
+input{
+ padding:8px 10px;
+ border-radius:8px;
+ border:1px solid #ccc;
+ margin-right:6px;
+}
+button{
+ padding:8px 14px;
+ border:none;
+ border-radius:8px;
+ background:#2563eb;
+ color:white;
+ font-weight:600;
+ cursor:pointer;
+}
+button:hover{background:#1d4ed8}
+.stats{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+ gap:15px;
+ margin:20px 0 25px 0;
+}
+.card{
+ background:#f6f8fb;
+ border-radius:12px;
+ padding:16px;
+ box-shadow:inset 0 0 0 1px #e3e7ef;
+}
+.card h3{margin:0;font-size:14px;color:#666}
+.card p{margin:6px 0 0 0;font-size:22px;font-weight:700}
+canvas{margin-top:10px}
+table{
+ border-collapse:collapse;
+ width:100%;
+ margin-top:25px;
+}
+th,td{
+ padding:10px;
+ border-bottom:1px solid #e5e7eb;
+ text-align:left;
+}
+th{background:#f3f4f6}
+.release-row{
+ background:#fafafa;
+ font-weight:600;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>GitHub Release Download Dashboard</h1>
+
+<div class="controls">
+<label>Username:</label>
+<input id="user" value="mylama">
+<label>Repository:</label>
+<input id="repo" value="lama">
+<button onclick="loadStats()">Load Stats</button>
+</div>
+
+<div class="stats">
+<div class="card">
+<h3>Total Downloads</h3>
+<p id="totalDownloads">-</p>
+</div>
+<div class="card">
+<h3>Releases</h3>
+<p id="releaseCount">-</p>
+</div>
+<div class="card">
+<h3>Assets</h3>
+<p id="assetCount">-</p>
+</div>
+</div>
+
+<canvas id="chart" height="120"></canvas>
+
+<table id="table">
+<thead>
+<tr>
+<th>Release</th>
+<th>Asset</th>
+<th>Downloads</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+</div>
+
+<script>
+let chart
+
+async function loadStats(){
+ const user=document.getElementById('user').value
+ const repo=document.getElementById('repo').value
+ const url=`https://api.github.com/repos/${user}/${repo}/releases`
+
+ const res=await fetch(url)
+ const releases=await res.json()
+
+ let totalDownloads=0
+ let assetCount=0
+ const releaseTotals={}
+
+ const tbody=document.querySelector('#table tbody')
+ tbody.innerHTML=''
+
+ releases.forEach(r=>{
+  let releaseSum=0
+
+  r.assets.forEach(a=>{
+   totalDownloads+=a.download_count
+   releaseSum+=a.download_count
+   assetCount++
+  })
+
+  releaseTotals[r.tag_name]=releaseSum
+
+  const headerRow=document.createElement('tr')
+  headerRow.className='release-row'
+  headerRow.innerHTML=`<td>${r.tag_name}</td><td>Total</td><td>${releaseSum}</td>`
+  tbody.appendChild(headerRow)
+
+  r.assets.forEach(a=>{
+   const tr=document.createElement('tr')
+   tr.innerHTML=`
+   <td></td>
+   <td>${a.name}</td>
+   <td>${a.download_count}</td>`
+   tbody.appendChild(tr)
+  })
+ })
+
+ document.getElementById('totalDownloads').textContent=totalDownloads
+ document.getElementById('releaseCount').textContent=releases.length
+ document.getElementById('assetCount').textContent=assetCount
+
+ renderChart(releaseTotals)
+}
+
+function renderChart(data){
+ const labels=Object.keys(data).reverse()
+ const values=Object.values(data).reverse()
+
+ const ctx=document.getElementById('chart')
+
+ if(chart) chart.destroy()
+
+ chart=new Chart(ctx,{
+  type:'bar',
+  data:{
+   labels:labels,
+   datasets:[{
+    label:'Downloads per Release',
+    data:values
+   }]
+  },
+  options:{
+   responsive:true,
+   plugins:{
+    legend:{display:false}
+   }
+  }
+ })
+}
+
+loadStats()
+</script>
+</body>
+</html>
