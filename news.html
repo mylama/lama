@@ -95,426 +95,651 @@
 				</section>
 
 				<section class="wrapper style1">
-						<div class="container">
+					<div class="container">
+						<h2>Versionsverlauf</h2>
 
-							<!-- <h2>Aktuelles:</h2>
-							<p>Ab dem Wintersemester 2022/23 findet ein Seminar an der PH Wien mit dem Titel "LaMA. Schularbeiten und Übungszettel leicht und schnell erstellt" statt. Im Zuge der Lehrveranstaltung wird der Umgang mit LaMA und seinen Funktionen erlernt.<br>
-								<a href="https://www.ph-online.ac.at/ph-wien/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/291030?$ctx=design=ca;lang=de&$scrollTo=toc_overview" target="_blank" style="text-decoration:none; color:#0645AD">Mehr Informationen</a>
-								
-								
-							</p> -->
-						
+						<style>
+							.changelog-container {
+								display: flex;
+								flex-direction: column;
+								gap: 1.2rem;
+								margin-top: 1.5rem;
+							}
+							.changelog-group-title {
+								margin-top: 2rem;
+								font-size: 1.4rem;
+								font-weight: bold;
+								color: #222;
+								border-bottom: 2px solid #ccc;
+								padding-bottom: .3rem;
+							}
+							.changelog-item {
+								background: #f7f7f7;
+								border-radius: 8px;
+								padding: 1rem 1.2rem;
+								box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+							}
+							.changelog-item h3 {
+								margin: 0 0 .5rem 0;
+								font-size: 1.1rem;
+								color: #333;
+							}
+							.changelog-item ul {
+								margin: 0;
+								padding-left: 1.2rem;
+							}
+							.changelog-item li {
+								margin-bottom: .25rem;
+							}
+						</style>
 
-					<h2>Versionsverlauf:</h2>
-					<ul style="list-style-type: square;">
-					<h3>v5.0.9:</h3>
-					<li>sort zusatzthemen alphabetically</li>	
-					<li>enable popup message</li>
-					<br><br>
-					<h3>v5.0.7 & v5.0.8:</h3>
-					<li>bug fix: broken update</li>		
-					<h3>v5.0.6</h3>
-					<li>bug fix: refresh_ddb (_database_addon)</li>
-					<br><br>
-					<h3>v5.0.5</h3>
-					<li>bug fix: create file sage</li>
-					<li>bug fix: refresh DDB</li>
-					<li>bug fix: restart LaMA after update on Windows</li>
-					<br><br>
-					<h3>v5.0.4</h3>
-					<li>downgrade python version to 3.12, because of certificate verfication issues</li>
-					<li>automatic .git delete, if database download was aborted</li>
-					<br><br>
-					<h3>v5.0.3</h3>
-					<li>edit lama service file</li>
-					<li>bug fix: repair missing key "halfpoints"</li>
-					<li>bug fix: error refresh_ddb</li>
-					<br><br>
-					<h3>v5.0.2</h3>
-					<li>bug fix: portable ghsotscript missing gswin64.exe for Windows</li>
-					<li>get rid of srdp-packages in Teildokument</li>
-					<br><br>
-					<h3>v5.0.1</h3>
-					<li>bug fix: missing gs_init.ps on MacOS</li>
-					<li>update srdp-mathematik.sty to version 1.14.0</li>
-					<br><br>					
-					<h3>v5.0.0</h3>
-					<li>install LaTeX Distribution with LaMA, to enable easy download and installation of LaMA</li>
-					<br><br>		
-					<h3>v4.7.3</h3>
-					<li>bug fix: different versions of srdp-mathematik.sty error on mac</li>
-					<br><br>	
-					<h3>v4.7.2</h3>
-					<li>bug fix: config file not found</li>
-					<br><br>
-					<h3>v4.7.1</h3>
-					<li>bug fix: Permission error when updating DDB on Windows. DDB moved to AppData</li>
-					<li>bug fix: Wrong label in WW (Stellenwert)</li>
-					<br><br>
-					<h3>v4.7.0</h3>
-					<li>New function in WorksheetWizard: ggT & kgV</li>
-					<li>new: change size of solutions in WW</li>
-					<li>bug fix: error when creating PFZ</li>
-					<li>bug fixes</li>
-					<br><br>
-					<h3>v4.6.6</h3>
-					<li>restructure "Zusatzthemen"</li>
-					<li>bug fixes</li>
-					<br><br>
-					<h3>v4.6.5</h3>
-					<li>bug fix</li>
-					<br><br>
-					<h3>v4.6.4</h3>
-					<li>bug fixes</li>
-					<br><br>
-					<h3>v4.6.3</h3>
-					<li>enable sending service files to developer to ensure better support</li>
-					<li>bug fixes</li>
-					<br><br>
-					<h3>v4.6.2</h3>
-					<li>bug fix</li>
-					<br><br>
-					<h3>v4.6.1</h3>
-					<li>bug fix: upload content for database not working properly</li>
-					<li>bug fix: WW single_subtraction not working</li>
-					<li>enable/disable date, when titlepage is switched off</li>
-					<li>bug fix: change to German commas in solution of WW</li>
-					<li>bug fix: error when no image and not titlepage is selected</li>
-					<li>bug fix: gaps in binomials</li>
-					<li>enable automatic group creation from LaTeX file</li>
-					<li>bug fix: double images are added in sage</li>
-					<li>bug fix: avoid futile brackets in WW</li>
-					<li>bug fix: import examples with images</li>
-					<li>bug fix: errors in WW</li>
-					<li>bug fix: rechoose nonogramm, when too small</li>
-					<li>bug fix: roman numerals</li>
-					<li>bug fix: steps number line</li>
-					<br><br>
-					<h3>v4.6.0</h3>
-					<li>new Worksheet Wizard: Primefactorization</li>
-					<li>bug fix: escape KeyError for broken examples creator</li>
-					<li>bug fix: hide & shoe items</li>
-					<li>bug fix: wizard coordinate system - turn off nonogramm</li>
-					<li>bug fix: 'beurteilung' not assigned</li>
-					<li>bug fix: number line starting value</li>
-					<li>bug fix: wizard error create coordinates system</li>
-					<li>bug fix: raise error, if SA name cannot be changed</li>
-					<li>bug fix: do not reset solution_off to solution_on</li>
-					<br><br>
-					<h3>v4.5.2</h3>
-					<li>bug fix: error create coordinate system</li>
-					<br><br>
-					<h3>v4.5.1</h3>
-					<li>bug fix: Error when creating Add/Subtract worksheets with wizard</li>
-					<li>bug fix: Occasional error when creating example with division with 0</li>
-					<br><br>
-					<h3>v4.5.0</h3>
-					<li>new: date can no be set "empty"</li>
-					<li>new: titlepage can now be changed individually</li>
-					<li>bug fix: check for newest update</li>
-					<li>bug fix: deleted logo</li>
-					<li>bug fix: convert png to eps</li>
-					<br><br>
-					<h3>v4.4.1</h3>
-					<li>bug fix: load LaMA files</li>
-					<br><br>
-					<h3>v4.4.0</h3>
-					<li>new: Worksheet Wizard: "Zahlenstrahl"</li>
-					<li>new: enable half points for examples</li>
-					<li>bug fix: images with underscores</li>
-					<li>bug fix: edit english content</li>
-					<li>bug fix: hide developer mode when not active</li>
-					<li>bug fix: progress window for loading LaMA files</li>
-					<li>bug fix: eliminate MacOS Font Warning</li>
-					<li>bug fix: enumerate ww coordinates</li>
-					<br><br>
-					<h3>v4.3.0</h3>
-					<li>new: Worksheet Wizard: "Stellenwerte"</li>
-					<li>new: Worksheet Wizard: "Roman Numerals"</li>
-					<li>new: Worksheet Wizard: "Coordinate System"</li>
-					<li>change of refresh_ddb window</li>
-					<li>bug fix: resort items Sek1</li>
-					<li>bug fix: edit file, when topic exists</li>
-					<br><br>
-					<h3>v4.2.1</h3>
-					<li>bug fix: create dirs on MacOS</li>
-					<li>bug fix: rewrite "_" in title for LaTeX</li>
-					<br><br>
-					<h3>v4.2.0</h3>
-					<li>new: create worksheet for binomial expansions in Worksheet Wizard</li>
-					<li>bug fix: correct chosen_program, when changed</li>
-					<li>bug fix: edit local saved examples</li>
-					<br><br>
-					<h3>v4.1.5</h3>
-					<li>enable hide/show date in custom sage</li>
-					<li>enable hide/show name</li>
-					<li>bug fix: wrong initial subchapters in cria creator</li>
-					<li>bug fix: error, when latex distribution not installed</li>
-					<li>bug fix: refresh_ddb, when srdp-package is updated</li>
-					<li>bug fix: refresh_ddb, when json.decodeerror occurs</li>
-					<li>bug fix: worksheet wizard - multiplication</li>
-					<br><br>
-					<h3>v4.1.4</h3>
-					<li>bug fix: error when typ2 individual edit is opened in user mode</li>
-					<br><br>
-					<h3>v4.1.3</h3>
-					<li>bug fix: show group A/B in Sage, when chosen</li>	
-					<li>bug fix: show AF when new task ist saved</li>
-					<li>new setting option: change search pdf output - newpage</li>				
-					<br><br>
-					<h3>v4.1.2</h3>
-					<li>bug fix: enter text in feedback lineedit (cria)</li>
-					<br><br>
-					<h3>v4.1.1</h3>
-					<li>bug fix: title of "Übungsblatt"</li> 
-					<li>bug fix: error when single_file is not checked</li>
-					<br><br>
-					<h3>v4.1.0:</h3>
-					<li>new: save and use individual grading scales</li> 
-					<li>new: change language of tasks to English</li>
-					<li>bug fix: save new files as user</li> 
-					<li>bug fix: hide/show items of typ2 tasks</li>
-					<li>bug fix: create sage files in one file</li>
-					<br><br>
-					<h3>v4.0.0</h3>
-					<li>new: automatically creating worksheets</li>
-					<li>new: convert graphic-files to eps via drag&drop</li>
-					<li>new: define eps-quality</li>
-					<li>new: enable drag&drop with tasks</li>
-					<li>new: import task list</li>
-					<li>bug fix: edit typ2 examples in sage</li>
-					<br><br>	
-					<h3>v3.4.3</h3>
-					<li>bug fix: create latex files in sage</li>
-					<br><br>
-					<h3>v3.4.2</h3>
-					<li>don't show console on Windows</li>
-					<li>show latex ouptut in LaMA-Loading Screen</li>
-					<li>update "Beurteilungsraster"</li>
-					<li>bug fix: load lama files</li>
-					<li>bug fix: update srdp-mathematik.sty </li>
-					<br><br>
-					<h3>v3.4.1</h3>
-					<li>edit GUI from Sage</li>
-					<li>bug fix: enable/show page numbering</li>
-					<li>enable inital popup window</li>
-					<li>bug fix: loading when no internet connection</li>
-					<li>bug fix: settings file not complete</li>
-					<br><br>
-					<h3>v3.4.0</h3>
-					<li>bug fix: edit typ2 examples in sage</li>
-					<li>bug fix: use typ2 examples with no introducing text</li>
-					<li>bug fix: hide/show items in SAGE</li>
-					<li>bug fix: LaMA Cria KO-Checkbox not working</li>
-					<li>bug fix: save half points</li>
-					<li>bug fix: save & load .lama files</li>
-					<br><br>
-					<h3>v.3.3.0 (01.2022)</h3>
-					<li>new: show GK-Catalogue</li>
-					<li>new: different percentages of grades in LaMA and Cria</li>
-					<li>new: 1/2 points for Typ1-examples</li>
-					<li>new (admin): save edited files directly in sage</li>
-					<li>bug fix: auto-refresh DDB after given intervall</li>
-					<li>bug fix: sage - newpage error fixed</li>
-					<li>bug fix: keep set infos in sage</li>
-					<br><br>
-					<h3>v.3.2.2 (11.2021)</h3>
-					<li>bug fix: save .lama file, when create sage file</li>
-					<li>bug fix: check internet connection, when editing drafts</li>
-					<li>bug fix: enable date in sage</li>
-					<li>bug fix: escape error, when database is not refreshed</li>
-					<br><br>
-					<h3>v.3.2.1 (11.2021)</h3>
-					<li>bug fix: search typ2-files, when no GKs are selected</li>
-					<li>bug fix: update srdp-mathematik.sty (& hide tabu.sty)</li>
-					<li>bug fix: refresh Miktex FNDB when srdp-tables.sty does not exist</li>
-					<li>bug fix: bookmark only for sections</li>
-					<br><br>
-					<h3>v.3.2.0 (5.11.2021)</h3>
-					<li>new function: advanced search</li>
-					<li>new function: cleanup database (Admin)</li>
-					<li>new function: connect file with exisiting images</li>
-					<li>bug fix: edit drafts</li>
-					<li>bug fix: set title sage</li>
-					<li>bug fix: change grade for drafts</li>
-					<li>bug fix: edit files with images</li>
-					<li>bug fix: speed up load lama file</li>
-					<br><br>
-					<h3>v.3.1.6 (2021)</h3>
-					<li>bug fix: save local variations</li>
-					<li>bug fix: compile with -dALLOWPSTRANSPARENCY to enable transparency in new Ghostscript version (> 9.53.3)</li>
-					<li>bug fix: feedback combobox</li>
-					<li>bug fix: hide/show items</li>
-					<li>bug fix: search mode LaMA Cria</li>
-					<br><br>
-					<h3>v.3.1.5 (2021)</h3>
-					<li>bug fix: create automatic groups</li>
-					<li>bug fix: create gks in one file</li>
-					<li>bug fix: save points and spaces inn .lama-file</li>
-					<br><br>
-					<h3>v.3.1.4 (2021)</h3>
-					<li>bug fix: save lama_settings in AppData folder</li>
-					<br><br>
-					<h3>v.3.1.3 (2021)</h3>
-					<li>bug fix: disable developer mode on mac</li>
-					<br><br>
-					<h3>v.3.1.2 (2021)</h3>
-					<li>bug fix: send feedback</li><
-					<br><br>
-					<h3>v.3.1.1 (2021)</h3>
-					<li>bug fix: error when website is not reachable</li>
-					<br><br>
-					<h3>v.3.1.0 (2021)</h3>
-					<li>new: change mode of "notenschluessel" (half points, percentage)</li>
-					<li>new: save individual percentage (notenschluessel)</li>
-					<br><br>
-					<h3>v.3.0.3 (2021)</h3>
-					<li>bug fix: initiate LaMA issues</li>
-					<br><br>
-					<h3>v.3.0.2 (2021)</h3>
-					<li>bug fix</li><br>
-					<br><br>
-					<h3>v.3.0.1 (2021)</h3>
-					<li>bug fix</li><br>
-					<br><br>
-					<h3>v.3.0.0 (2021)</h3>
-					<li>move database to GitHub</li>
-					<br><br>
-					<h3>v.2.3.0 (12.01.2021)</h3>
-					<li>new function: individual edit of examples</li>
-					<li>new settings: autosave, standard source, dark mode</li>
-					<li>option do not show "notenschluessel" added</li>
-					<li>bug fix: save new examples in cria</li>
-					<br><br>
-					<h3>v.2.2.1 (12.11.2020)</h3>
-					<li>bug fix: Path of PDF-Reader with space returns error</li>
-					<br><br>
-					<h3>v.2.2.0 (10.11.2020)</h3>
-					<li>new function: update srdp-mathematik via LaMA</li>
-					<li>new fuction: LaMA settings (define pdf-reader path, pre-choice programm)</li>
-					<li>bug fix: error when saving variation of L-GKs</li>
-					<li>bug fix: number of examples gets not updated, when example is deleted</li>
-					<li>bug fix: position of scroll bar in sage fixed</li>
-					<li>bug fix: occasionally more than one example were added when clicked in sage</li>
-					<br><br>
-					<h3>v.2.1.1 (01.10.2020)</h3>
-					<li>number GKCs, and show date</li>
-					<li>number=0, means no numbering of headline</li>
-					<li>bug fix: error when saving examples directly in folders</li>
-					<br><br>
-					<h3>v.2.1.0 (01.09.2020)</h3>
-					<li>new function: create variation of existing file</li>
-					<li>change to "Zusatzthemen"</li>
-					<li>bug fix: sending feedback raises error via gmail adress</li>
-					<li>bug fix: error when sending "Allgemeine Rückmeldung" in LaMA Cria</li>
-					<li>bug fix: incorrect sorting of typ2 examples</li>
-					<li>bug fix: error when adding examples to Sage</li>
-					<li>bug fix: open PDF on Windows</li>
-					<li>bug fix: error saving local files</li>
-					<br><br>
-					<h3>v.2.0.3 (05.07.2020)</h3>
-					<li>bug fix: save test in different drive</li>
-					<li>bug fix: search examples including drafts</li>
-					<li>bug fix: creating files for users including images</li>
-					<li>bug fix: loading LaMA file through double click</li><br>
-					<br><br>
-					<h3>v.2.0.2 (29.06.2020)</h3>
-					<li>bug fix: error when creating test with 'beurteilungsraster'</li>
-					<li>bug fix: change ausgleichspunkte not working</li>
-					<br><br>
-					<h3>v.2.0.1 (23.06.2020)</h3>
-					<li>bug fix: error when app closed and only .tex-file was created</li>
-					<li>bug fix: create groups in sage</li>
-					<li>bug fix: error when creating test in LaMA cria</li>
-					<li>correct spelling mistake</li>
-					<br><br>
-					<h3>v.2.0.0 (18.06.2020)</h3>
-					<li>merge LaMA and LaMA Cria to one program</li>
-					<li>change GUI and color scheme</li>
-					<li>change Loading window</li>
-					<br><br>
-					<h3>v.1.9.1 (04.04.2020)</h3>
-					<li>Bug fix: Errors when files with images saved directly</li>
-					<br><br>
-					<h3>v.1.9.0 (20.03.2020)</h3>
-					<li>New: Drafts can be searched and included in tests</li>
-					<li>New: Files can be saved locally and used</li>
-					<li>Bug fix</li><br>
-					<br><br>
-					<h3>v1.8.6 (20.02.2020):</h3>
-					<li>Bug fix: Edit maximum size for SAGE widgets for small screens</li><br>
-					<br><br>
-					<h3>v1.8.5 (01.12.2019):</h3>
-					<li>Bug Fix: Update did not work, when permission of update is not changed manually</li>
-					<li>Spacing when creating a test: 99cm= \newpage</li>
-					<br><br>
-					<h3>v1.8.4 (16.11.2019):</h3>
-					<li>added ScrollArea for "Grundkompetenzen" for small screens</li>
-					<li>"Übungsblatt" and "Nachschularbeit" can be created</li>
-					<li>"Übungsblatt" & "Grundkompetenzcheck" disables Option "Notenschlüssel/Beurteilungsraster"</li>
-					<li>"Schularbeit" can be reseted</li>
-					<li>Creation of .pdf and/or .lama can be skipped, when creating a test</li>
-					<li>Spacing when creating a test: 99cm= \newpage</li>
-					<br><br>
-					<h3>v1.8.3 (04.10.2019):</h3>
-					<li>Password for writing bug report removed from source code</li>
-					<br><br>
-					<h3>v1.8.2 (04.09.2019):</h3>
-					<li>Bug Fix: Tests cannot be created on macOS, when there are spaces in the filename</li>
-					<li>Bug Fix: MacOS raises error when folder is opened after creating a test</li><br>
-					<br><br>
-					<h3>v1.8.1 (02.10.2019):</h3>
-					<li>Bug Fix: No PDF output when SumatraPDF is not installed</li>
-					<br><br>
-					<h3>v1.8.0 (29.09.2019):</h3>
-					<li>New Feature: conversion jpg/png to eps</li>
-					<li>Changes in GUI-Interface</li>
-					<li>Problem with conversion of jpg to eps solved</li>
-					<br><br>
-					<h3>v1.7.1 (29.08.2019):</h3>
-					<li>Minor bug fix</li>
-					<br><br>
-					<h3>v1.7 (26.08.2019):</h3>
-					<li>New Feature: Tool to create tests in LaMA ("Neue Schularbeit")</li>
-					<li>Output: .pdf and .tex file</li>
-					<li>*.lama files can be saved and reloaded into LaMA</li>
-					<li>New Feature: Send feedback and bug reports/errors to developers ("Feedback & Fehler")</li>
-					<li>Minor bug fix</li><br>
-					<br><br>
-					<h3>v1.6 (29.04.2019):</h3>
-					<br><br>
-					<li>changed encoding to utf-8</li>
-					<li>bug fix</li><br>
-					<br><br>
-					<h3>v1.5 (22.04.2019):</h3>
-					<li>rename to LaMA (LaTeX Mathematics Assistent)</li>
-					<li>programm creates directories as needed</li>
-					<br><br>
-					<h3>v1.4 (30.03.2019):</h3>
-					<li>Created one file (Fusion of File_Assistent and File_Creator)</li>
-					<br><br>
-					<h3>v1.3 (28.03.2019):</h3>	
-					<li>adapted Assistent to changed config1</li>
-					<br><br>
-					<h3>v1.2 (20.03.2019):</h3>
-					<li>Switch to PyQt5</li>
-					<li>added CHANGELOG.md</li>
-					<br><br>
-					<h3>v1.1 (16.03.2019):</h3>
-					<li>Updated GUI</li>
-					<li>combined Typ1 and Typ2 problems into one GUI</li>
-					<li>New folder structure</li>
-					<li>added .exe</li>
-					<li>added documentation (README, INSTALLATION)</li>
-					<li>implemented config file (in yaml)</li>
-					<li>ported to UNIX (mac and linux)</li>
-					<br><br>
-					<h3>v1.0 (11.10.2018):</h3>
-					<li>Initial release</li>
-			</ul>
-			</div>
+						<div class="changelog-container">
+
+
+							<!--  ============================
+								GROUP: VERSION 5.x
+							============================ -->
+							<div class="changelog-group-title">Version 5.x</div>
+
+							<div class="changelog-item"><h3>v5.0.9</h3>
+								<ul><li>sort zusatzthemen alphabetically</li><li>enable popup message</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v5.0.7 & v5.0.8</h3>
+								<ul><li>bug fix: broken update</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v5.0.6</h3>
+								<ul><li>bug fix: refresh_ddb (_database_addon)</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v5.0.5</h3>
+								<ul>
+									<li>bug fix: create file sage</li>
+									<li>bug fix: refresh DDB</li>
+									<li>bug fix: restart LaMA after update on Windows</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v5.0.4</h3>
+								<ul>
+									<li>downgrade python version to 3.12</li>
+									<li>automatic .git delete if download aborted</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v5.0.3</h3>
+								<ul>
+									<li>edit lama service file</li>
+									<li>bug fix: missing key "halfpoints"</li>
+									<li>bug fix: refresh_ddb error</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v5.0.2</h3>
+								<ul>
+									<li>bug fix: portable ghostscript</li>
+									<li>remove srdp-packages in Teildokument</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v5.0.1</h3>
+								<ul>
+									<li>bug fix: missing gs_init.ps (macOS)</li>
+									<li>update srdp-mathematik.sty 1.14.0</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v5.0.0</h3>
+								<ul><li>install LaTeX distribution with LaMA</li></ul>
+							</div>
+
+
+
+							<!--  ============================
+								GROUP: VERSION 4.x
+							============================ -->
+							<div class="changelog-group-title">Version 4.x</div>
+
+							<div class="changelog-item"><h3>v4.7.3</h3>
+								<ul><li>bug fix: srdp-mathematik versions mac conflict</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.7.2</h3>
+								<ul><li>bug fix: config file not found</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.7.1</h3>
+								<ul>
+									<li>bug fix: DDB permission error (Windows)</li>
+									<li>bug fix: wrong label WW (Stellenwert)</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.7.0</h3>
+								<ul>
+									<li>WW: ggT & kgV</li>
+									<li>change size of solutions</li>
+									<li>bug fix: PFZ</li>
+									<li>bug fixes</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.6.6</h3>
+								<ul><li>restructure Zusatzthemen</li><li>bug fixes</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.6.5</h3><ul><li>bug fix</li></ul></div>
+
+							<div class="changelog-item"><h3>v4.6.4</h3><ul><li>bug fixes</li></ul></div>
+
+							<div class="changelog-item"><h3>v4.6.3</h3>
+								<ul><li>send service files to developer</li><li>bug fixes</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.6.2</h3><ul><li>bug fix</li></ul></div>
+
+							<div class="changelog-item"><h3>v4.6.1</h3>
+								<ul>
+									<li>bug fix: upload database</li>
+									<li>bug fix: WW single_subtraction</li>
+									<li>enable/disable date</li>
+									<li>German commas in WW</li>
+									<li>bug fix: missing image + no titlepage</li>
+									<li>binomial gaps</li>
+									<li>automatic group creation</li>
+									<li>double images in sage</li>
+									<li>avoid futile brackets</li>
+									<li>import examples with images</li>
+									<li>errors in WW</li>
+									<li>rechoose nonogramm</li>
+									<li>roman numerals</li>
+									<li>steps number line</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.6.0</h3>
+								<ul>
+									<li>WW: Primefactorization</li>
+									<li>escape KeyError</li>
+									<li>hide & show items</li>
+									<li>WW coordinate system</li>
+									<li>bug fix: beurteilung</li>
+									<li>number line start</li>
+									<li>WW coordinates system</li>
+									<li>error rename SA</li>
+									<li>solution_on/off fix</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.5.2</h3>
+								<ul><li>bug fix: coordinate system</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.5.1</h3>
+								<ul>
+									<li>WW Add/Subtract error</li>
+									<li>division by 0 example</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.5.0</h3>
+								<ul>
+									<li>empty date</li>
+									<li>individual titlepage</li>
+									<li>bug fix: update check</li>
+									<li>bug fix: logo deleted</li>
+									<li>png → eps fix</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.4.1</h3><ul><li>bug fix: load LaMA files</li></ul></div>
+
+							<div class="changelog-item"><h3>v4.4.0</h3>
+								<ul>
+									<li>WW: Zahlenstrahl</li>
+									<li>half points</li>
+									<li>underscore images</li>
+									<li>edit english content</li>
+									<li>hide dev mode</li>
+									<li>progress window</li>
+									<li>MacOS Font Warning</li>
+									<li>enumerate ww coordinates</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.3.0</h3>
+								<ul>
+									<li>WW: Stellenwerte</li>
+									<li>WW: Roman Numerals</li>
+									<li>WW: Coordinate System</li>
+									<li>refresh_ddb window</li>
+									<li>resort items Sek1</li>
+									<li>bug fix: edit file</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.2.1</h3>
+								<ul>
+									<li>dirs on mac</li>
+									<li>rewrite "_" in title</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.2.0</h3>
+								<ul>
+									<li>WW: binomial expansions</li>
+									<li>chosen_program bug</li>
+									<li>edit local examples</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.1.5</h3>
+								<ul>
+									<li>hide/show date</li>
+									<li>hide/show name</li>
+									<li>wrong initial subchapters</li>
+									<li>latex distribution not installed</li>
+									<li>refresh_ddb srdp</li>
+									<li>refresh_ddb decodeerror</li>
+									<li>WW multiplication</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.1.4</h3><ul><li>bug fix: typ2 edit user mode</li></ul></div>
+
+							<div class="changelog-item"><h3>v4.1.3</h3>
+								<ul>
+									<li>show group A/B in sage</li>
+									<li>show AF when saved</li>
+									<li>new setting: search pdf newpage</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.1.2</h3><ul><li>cria feedback lineedit</li></ul></div>
+
+							<div class="changelog-item"><h3>v4.1.1</h3>
+								<ul>
+									<li>title Übungsblatt</li>
+									<li>single_file error</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.1.0</h3>
+								<ul>
+									<li>individual grading scales</li>
+									<li>change language EN</li>
+									<li>save new files as user</li>
+									<li>hide/show typ2 items</li>
+									<li>create sage files in one file</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v4.0.0</h3>
+								<ul>
+									<li>automatic worksheets</li>
+									<li>convert graphics via drag&drop</li>
+									<li>define eps quality</li>
+									<li>drag&drop tasks</li>
+									<li>import task list</li>
+									<li>edit typ2 in sage</li>
+								</ul>
+							</div>
+
+
+
+							<!--  ============================
+								GROUP: VERSION 3.x
+							============================ -->
+							<div class="changelog-group-title">Version 3.x</div>
+
+							<div class="changelog-item"><h3>v3.4.3</h3>
+								<ul><li>bug fix: create LaTeX files sage</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.4.2</h3>
+								<ul>
+									<li>no console Windows</li>
+									<li>show latex output</li>
+									<li>update Beurteilungsraster</li>
+									<li>load lama files</li>
+									<li>update srdp-mathematik</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.4.1</h3>
+								<ul>
+									<li>edit GUI from Sage</li>
+									<li>page numbering</li>
+									<li>popup window</li>
+									<li>loading w/o internet</li>
+									<li>settings file complete</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.4.0</h3>
+								<ul>
+									<li>typ2 examples</li>
+									<li>typ2 no introduction</li>
+									<li>hide/show items</li>
+									<li>cria KO checkbox</li>
+									<li>save half points</li>
+									<li>save/load .lama</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.3.0 (01.2022)</h3>
+								<ul>
+									<li>show GK catalogue</li>
+									<li>different percentages</li>
+									<li>1/2 points</li>
+									<li>admin: save edited files</li>
+									<li>auto-refresh DDB</li>
+									<li>sage newpage fix</li>
+									<li>keep set infos</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.2.2 (11.2021)</h3>
+								<ul>
+									<li>save .lama when creating sage</li>
+									<li>internet connection drafts</li>
+									<li>enable date</li>
+									<li>escape DB not refreshed</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.2.1 (11.2021)</h3>
+								<ul>
+									<li>search typ2 no GKs</li>
+									<li>update srdp-math & hide tabu</li>
+									<li>refresh Miktex FNDB</li>
+									<li>bookmark sections only</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.2.0 (05.11.2021)</h3>
+								<ul>
+									<li>advanced search</li>
+									<li>cleanup DB</li>
+									<li>connect file with images</li>
+									<li>edit drafts</li>
+									<li>set title sage</li>
+									<li>change draft grades</li>
+									<li>edit files with images</li>
+									<li>speed load lama</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.1.6 (2021)</h3>
+								<ul>
+									<li>save local variations</li>
+									<li>Ghostscript transparency</li>
+									<li>feedback combobox</li>
+									<li>hide/show items</li>
+									<li>search mode cria</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.1.5 (2021)</h3>
+								<ul>
+									<li>automatic groups</li>
+									<li>create GKs in one file</li>
+									<li>save points/spaces</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.1.4 (2021)</h3>
+								<ul><li>save settings in AppData</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.1.3 (2021)</h3>
+								<ul><li>disable dev mode mac</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.1.2 (2021)</h3>
+								<ul><li>send feedback</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.1.1 (2021)</h3>
+								<ul><li>website unreachable: error</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.1.0 (2021)</h3>
+								<ul>
+									<li>mode notenschlüssel</li>
+									<li>save individual percentage</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.0.3 (2021)</h3>
+								<ul><li>initiate LaMA issues</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.0.2 (2021)</h3>
+								<ul><li>bug fix</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.0.1 (2021)</h3>
+								<ul><li>bug fix</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v3.0.0 (2021)</h3>
+								<ul><li>move database to GitHub</li></ul>
+							</div>
+
+
+
+							<!--  ============================
+								GROUP: VERSION 2.x
+							============================ -->
+							<div class="changelog-group-title">Version 2.x</div>
+
+							<div class="changelog-item"><h3>v2.3.0 (12.01.2021)</h3>
+								<ul>
+									<li>edit examples</li>
+									<li>autosave, standard source, dark mode</li>
+									<li>option hide notenschlüssel</li>
+									<li>save new examples cria</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v2.2.1 (12.11.2020)</h3>
+								<ul><li>PDF-Reader path with space error</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v2.2.0 (10.11.2020)</h3>
+								<ul>
+									<li>update srdp-mathematik</li>
+									<li>LaMA settings</li>
+									<li>save variations error</li>
+									<li>delete example count</li>
+									<li>scroll bar fix</li>
+									<li>multiple click issue</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v2.1.1 (01.10.2020)</h3>
+								<ul>
+									<li>number GKCs + date</li>
+									<li>number=0 = no numbering</li>
+									<li>bug fix save in folders</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v2.1.0 (01.09.2020)</h3>
+								<ul>
+									<li>variation of existing file</li>
+									<li>Zusatzthemen changes</li>
+									<li>gmail feedback error</li>
+									<li>LaMA cria Rückmeldung</li>
+									<li>sorting typ2 examples</li>
+									<li>add examples to sage</li>
+									<li>open PDF Windows</li>
+									<li>save local files</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v2.0.3 (05.07.2020)</h3>
+								<ul>
+									<li>save in different drive</li>
+									<li>search including drafts</li>
+									<li>files with images</li>
+									<li>load via double click</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v2.0.2 (29.06.2020)</h3>
+								<ul>
+									<li>error beurteilungsraster</li>
+									<li>ausgleichspunkte</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v2.0.1 (23.06.2020)</h3>
+								<ul>
+									<li>close app .tex only</li>
+									<li>create groups</li>
+									<li>LaMA cria error</li>
+									<li>spelling mistake</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v2.0.0 (18.06.2020)</h3>
+								<ul>
+									<li>merge LaMA & Cria</li>
+									<li>GUI + color scheme</li>
+									<li>loading window</li>
+								</ul>
+							</div>
+
+
+
+							<!--  ============================
+								GROUP: VERSION 1.x
+							============================ -->
+							<div class="changelog-group-title">Version 1.x</div>
+
+							<div class="changelog-item"><h3>v1.9.1 (04.04.2020)</h3>
+								<ul><li>errors images saved directly</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.9.0 (20.03.2020)</h3>
+								<ul>
+									<li>drafts search & include</li>
+									<li>local saved files</li>
+									<li>bug fix</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.8.6 (20.02.2020)</h3>
+								<ul><li>edit max size SAGE widgets small screens</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.8.5 (01.12.2019)</h3>
+								<ul>
+									<li>update permission issue</li>
+									<li>spacing 99cm=newpage</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.8.4 (16.11.2019)</h3>
+								<ul>
+									<li>ScrollArea GKs small screens</li>
+									<li>Übungsblatt & Nachschularbeit</li>
+									<li>disable notenschlüssel</li>
+									<li>reset Schularbeit</li>
+									<li>skip pdf/lama</li>
+									<li>spacing 99cm=newpage</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.8.3 (04.10.2019)</h3>
+								<ul><li>password removed from source</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.8.2 (04.09.2019)</h3>
+								<ul>
+									<li>macOS spaces filename</li>
+									<li>macOS open folder error</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.8.1 (02.10.2019)</h3>
+								<ul><li>no PDF output without SumatraPDF</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.8.0 (29.09.2019)</h3>
+								<ul>
+									<li>jpg/png to eps</li>
+									<li>GUI changes</li>
+									<li>jpg→eps fix</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.7.1 (29.08.2019)</h3>
+								<ul><li>minor bug fix</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.7 (26.08.2019)</h3>
+								<ul>
+									<li>Neue Schularbeit</li>
+									<li>pdf + tex</li>
+									<li>.lama files</li>
+									<li>feedback/bug reports</li>
+									<li>minor bug fix</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.6 (29.04.2019)</h3>
+								<ul>
+									<li>utf-8</li>
+									<li>bug fix</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.5 (22.04.2019)</h3>
+								<ul>
+									<li>rename to LaMA</li>
+									<li>create directories</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.4 (30.03.2019)</h3>
+								<ul><li>Fusion of tools</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.3 (28.03.2019)</h3>
+								<ul><li>adapted Assistant to config1</li></ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.2 (20.03.2019)</h3>
+								<ul>
+									<li>Switch to PyQt5</li>
+									<li>added CHANGELOG.md</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.1 (16.03.2019)</h3>
+								<ul>
+									<li>updated GUI</li>
+									<li>combine Typ1 & Typ2 GUI</li>
+									<li>new folder structure</li>
+									<li>.exe</li>
+									<li>docs added</li>
+									<li>config yaml</li>
+									<li>ported to UNIX</li>
+								</ul>
+							</div>
+
+							<div class="changelog-item"><h3>v1.0 (11.10.2018)</h3>
+								<ul><li>Initial release</li></ul>
+							</div>
+
+
+						</div>
+					</div>
 				</section>
-
 			<!-- Posts -->
 				<!-- <section class="wrapper style1">
 					<div class="container">
