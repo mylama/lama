@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
+            "type": "editor-browser",
             "request": "launch",
-            "name": "Open unterstuetzen.html",
-            "file": "c:\\Users\\mskon\\Documents\\GitHub\\lama\\unterstuetzen.html"
+            "name": "Open impressum.html",
+            "url": "file:///c%3A/Users/mskon/Documents/GitHub/lama/impressum.html"
         }
     ]
 }
