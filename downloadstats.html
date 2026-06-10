@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -14,7 +13,7 @@ body{
  padding:40px;
 }
 .container{
- max-width:1000px;
+ max-width:1100px;
  margin:auto;
  background:white;
  padding:30px 40px;
@@ -106,6 +105,8 @@ th{background:#f3f4f6}
 <tr>
 <th>Release</th>
 <th>Datum</th>
+<th>Tage Latest</th>
+<th>Downloads/Tag</th>
 <th>Asset</th>
 <th>Downloads</th>
 </tr>
@@ -135,6 +136,9 @@ async function loadStats(){
  const res=await fetch(url)
  const releases=await res.json()
 
+ // 🔥 Sortieren nach Datum (neu → alt)
+ releases.sort((a,b)=> new Date(b.published_at) - new Date(a.published_at))
+
  let totalDownloads=0
  let assetCount=0
 
@@ -143,7 +147,7 @@ async function loadStats(){
  const tbody=document.querySelector('#table tbody')
  tbody.innerHTML=''
 
- releases.forEach(r=>{
+ releases.forEach((r,index)=>{
   let releaseSum=0
 
   r.assets.forEach(a=>{
@@ -152,11 +156,21 @@ async function loadStats(){
    assetCount++
   })
 
-  const date = formatDate(r.published_at)
+  const releaseDate = new Date(r.published_at)
+  let daysLatest
+
+  if(index === 0){
+   const now = new Date()
+   daysLatest = Math.ceil((now - releaseDate) / (1000*60*60*24))
+  } else {
+   const prevDate = new Date(releases[index-1].published_at)
+   daysLatest = Math.ceil((prevDate - releaseDate) / (1000*60*60*24))
+  }
+
+  const perDay = daysLatest > 0 ? (releaseSum / daysLatest).toFixed(1) : "-"
 
   releasesData.push({
    name: r.tag_name,
-   date: date,
    downloads: releaseSum
   })
 
@@ -164,7 +178,9 @@ async function loadStats(){
   headerRow.className='release-row'
   headerRow.innerHTML=`
    <td>${r.tag_name}</td>
-   <td>${date}</td>
+   <td>${formatDate(r.published_at)}</td>
+   <td>${daysLatest}</td>
+   <td>${perDay}</td>
    <td>Total</td>
    <td>${releaseSum}</td>`
   tbody.appendChild(headerRow)
@@ -172,6 +188,8 @@ async function loadStats(){
   r.assets.forEach(a=>{
    const tr=document.createElement('tr')
    tr.innerHTML=`
+   <td></td>
+   <td></td>
    <td></td>
    <td></td>
    <td>${a.name}</td>
@@ -188,7 +206,7 @@ async function loadStats(){
 }
 
 function renderChart(data){
- const labels = data.map(r => `${r.name} (${r.date})`).reverse()
+ const labels = data.map(r => r.name).reverse()
  const values = data.map(r => r.downloads).reverse()
 
  const ctx=document.getElementById('chart')
