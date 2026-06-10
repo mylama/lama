@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8" />
 <title>GitHub Release Download Dashboard</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <style>
 body{
  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
@@ -69,6 +71,7 @@ th{background:#f3f4f6}
 }
 </style>
 </head>
+
 <body>
 <div class="container">
 <h1>GitHub Release Download Dashboard</h1>
@@ -102,6 +105,7 @@ th{background:#f3f4f6}
 <thead>
 <tr>
 <th>Release</th>
+<th>Datum</th>
 <th>Asset</th>
 <th>Downloads</th>
 </tr>
@@ -114,6 +118,15 @@ th{background:#f3f4f6}
 <script>
 let chart
 
+function formatDate(dateStr){
+ const d = new Date(dateStr)
+ return d.toLocaleDateString('de-DE', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit'
+ })
+}
+
 async function loadStats(){
  const user=document.getElementById('user').value
  const repo=document.getElementById('repo').value
@@ -124,7 +137,8 @@ async function loadStats(){
 
  let totalDownloads=0
  let assetCount=0
- const releaseTotals={}
+
+ const releasesData=[]
 
  const tbody=document.querySelector('#table tbody')
  tbody.innerHTML=''
@@ -138,16 +152,27 @@ async function loadStats(){
    assetCount++
   })
 
-  releaseTotals[r.tag_name]=releaseSum
+  const date = formatDate(r.published_at)
+
+  releasesData.push({
+   name: r.tag_name,
+   date: date,
+   downloads: releaseSum
+  })
 
   const headerRow=document.createElement('tr')
   headerRow.className='release-row'
-  headerRow.innerHTML=`<td>${r.tag_name}</td><td>Total</td><td>${releaseSum}</td>`
+  headerRow.innerHTML=`
+   <td>${r.tag_name}</td>
+   <td>${date}</td>
+   <td>Total</td>
+   <td>${releaseSum}</td>`
   tbody.appendChild(headerRow)
 
   r.assets.forEach(a=>{
    const tr=document.createElement('tr')
    tr.innerHTML=`
+   <td></td>
    <td></td>
    <td>${a.name}</td>
    <td>${a.download_count}</td>`
@@ -159,12 +184,12 @@ async function loadStats(){
  document.getElementById('releaseCount').textContent=releases.length
  document.getElementById('assetCount').textContent=assetCount
 
- renderChart(releaseTotals)
+ renderChart(releasesData)
 }
 
 function renderChart(data){
- const labels=Object.keys(data).reverse()
- const values=Object.values(data).reverse()
+ const labels = data.map(r => `${r.name} (${r.date})`).reverse()
+ const values = data.map(r => r.downloads).reverse()
 
  const ctx=document.getElementById('chart')
 
